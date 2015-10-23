@@ -20591,7 +20591,7 @@ var fluid_1_5 = fluid_1_5 || {};
         
         model: {
             pageIndex: undefined,
-            pageSize: 50,
+            pageSize: 20,
             totalRange: undefined
         },
         
