@@ -245,3 +245,25 @@ conditioncheck-sortableConditionCheckRefNumberLabel: Sortable Condition Check/As
 
 #ValuationControl
 valuationcontrol-sortableValuationcontrolRefNumberLabel: Sortable Valuation Control Reference Number
+
+#exhibition
+exhibition-exhibitionSectionOMCAGroupLabel: Exhibition Sections
+exhibition-exhibitionSectionNameOMCALabel: Section
+exhibition-exhibitionSubsectionNameOMCALabel: Subsection
+exhibition-exhibitionSectionLocationOMCALabel: Component
+exhibition-exhibitionSectionObjectsOMCALabel: Element
+exhibition-exhibitionSectionNoteOMCALabel: Remarks
+
+exhibition-exhibitionObjectOMCAGroupLabel: Object Checklist
+exhibition-exhibitionObjectNumberOMCALabel: Object ID
+exhibition-exhibitionObjectNameOMCALabel: Name
+exhibition-exhibitionObjectConsCheckDateOMCALabel: Cons. Check
+exhibition-exhibitionObjectConsTreatmentOMCALabel: Cons. Treatment
+exhibition-exhibitionDisplayAsGraphicOMCALabel: Display as Graphic?
+exhibition-exhibitionObjectMountOMCALabel: Mount/Frame
+exhibition-exhibitionObjectSectionOMCALabel: Section
+exhibition-exhibitionObjectCaseOMCALabel: Subsection
+exhibition-exhibitionObjectSeqNumOMCALabel: Component
+exhibition-exhibitionObjectRotationOMCALabel: Element
+exhibition-exhibitionObjectNoteOMCALabel: Note
+exhibition-exhibitionCrateExistsOMCALabel: Crate Exists?
