@@ -173,6 +173,13 @@ collection-object-argusSubjectLabel: Argus Subject
 collection-object-argusMadeLabel: Argus Made
 collection-object-argusFoundAndUsedLabel: Argus Found and Used
 collection-object-exhibitionHistoryLabel: Exhibition History
+collection-object-ipAuditLabel: IP Audit
+collection-object-copyrightHolderLabel: Copyright Holder
+collection-object-signitureOMCALabel: Signiture
+collection-object-inscriptionOMCALabel: Inscription
+collection-object-previousOwnersGroupLabel: Previous Owners
+collection-object-previousOwnerLabel: Previous Owner
+collection-object-provenanceInformationLabel: Provenance Information
 
 collection-object-viewerContributionGroupLabel: Object Viewers Contribution
 collection-object-viewerNameLabel: Viewer's Name
