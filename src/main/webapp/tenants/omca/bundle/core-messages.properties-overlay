@@ -217,8 +217,8 @@ collection-object-accessRestrictionOnBehalfOfLabel: On behalf of (organization)
 collection-object-accessRestrictionDateLabel: Date
               
 collection-object-culturalCareNoteLabel: Cultural care notes
-collection-object-computedCurrentLocationLabel: Current storage location
-collection-object-computedCurrentLocationSearchLabel: Current storage location
+collection-object-computedCurrentLocationLabel: Current location
+collection-object-computedCurrentLocationSearchLabel: Current location
 collection-object-computedCrateLabel: Current box or container
 collection-object-computedCrateSearchLabel: Current box or container
 # ------------------------------------------------------------
