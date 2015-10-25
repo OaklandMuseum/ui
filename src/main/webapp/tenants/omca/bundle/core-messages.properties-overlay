@@ -158,7 +158,7 @@ collection-object-photoLabel: Photo
 collection-object-determinationHistoryGroupLabel: Determination History
 collection-object-determinationHistoryGroupListLabel: Determination History
 collection-object-dhNameLabel: Name
-collection-object-dhQualifierLabel: Quantifier
+collection-object-dhQualifierLabel: Qualifier
 collection-object-identByLabel: By
 collection-object-identDateLabel: Date
 collection-object-institutionLabel: Institution
@@ -180,6 +180,10 @@ collection-object-inscriptionOMCALabel: Inscription
 collection-object-previousOwnersGroupLabel: Previous Owners
 collection-object-previousOwnerLabel: Previous Owner
 collection-object-provenanceInformationLabel: Provenance Information
+collection-object-objectProductionPersonGroupLabel: Makers
+collection-object-objectProductionPersonLabel: Maker
+collection-object-objectProductionPersonRoleLabel: Maker role
+collection-object-objectCollectionInformationLabel: Field Collection Information
 
 collection-object-viewerContributionGroupLabel: Object Viewers Contribution
 collection-object-viewerNameLabel: Viewer's Name
