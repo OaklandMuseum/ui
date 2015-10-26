@@ -2138,5 +2138,12 @@ fluid.registerNamespace("cspace.util");
         return foo;
     }
 
-    
+    // Utility to clone a field's value.
+    // Used in computedCurrentLocationDisplay
+    cspace.util.cloneField = function(field) {
+        var clonedAndDeURNed = cspace.util.urnToString(field);
+        console.log("cloned field: " + clonedAndDeURNed);
+        return clonedAndDeURNed;
+    }
+
 })(jQuery, fluid);

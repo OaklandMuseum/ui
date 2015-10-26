@@ -184,6 +184,7 @@ collection-object-objectProductionPersonGroupLabel: Makers
 collection-object-objectProductionPersonLabel: Maker
 collection-object-objectProductionPersonRoleLabel: Maker role
 collection-object-objectCollectionInformationLabel: Field Collection Information
+collection-object-computedCurrentLocationDisplayLabel: Computed Location
 
 collection-object-viewerContributionGroupLabel: Object Viewers Contribution
 collection-object-viewerNameLabel: Viewer's Name
