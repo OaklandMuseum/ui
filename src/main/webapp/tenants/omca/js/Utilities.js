@@ -2114,28 +2114,40 @@ fluid.registerNamespace("cspace.util");
         return (new Array(len + 1).join('0') + str).slice(-len);
     };
 
-    var isNumericRegExp = /^\d+$/;
+    var testHasInitialNumberExp = /^\d+.*$/;
+    var testHasInitialLetterExp = /^\D+.*$/;
+    var hasInitialNumberExp = /^(\d+)(.*)$/;
+    var hasInitialLetterExp = /^(\D+)(.*)$/;
 
     cspace.util.computeSortableObjectNumber = function(objectNumber) {
         var parts = objectNumber.split('.');
         var sortableParts = [];
-        
+
         for (var i=0; i<parts.length; i++) {
             var part = parts[i];
-            
-            if (isNumericRegExp.test(part)) {
-                part = zeroPad(part, 5);
-            }
-            else {
-                part = part.toLowerCase();
+
+            if (testHasInitialNumberExp.test(part)) {
+                var foo = part.match(hasInitialNumberExp);
+                console.log("part(#):" + foo);
+                if (foo && foo.length > 2) {
+                    part = zeroPad(foo[1], 10) + foo[2];
+                }
+            } else if (testHasInitialLetterExp.test(part)) {
+                var foo = part.match(hasInitialLetterExp);
+                console.log("part(a):" + foo);
+                if (foo && foo.length > 2) {
+                    part = foo[1] + zeroPad(foo[2], 10);
+                }
+            } else {
+                console.log("no match");
             }
             
             sortableParts.push(part);
         }
         
-        var foo = sortableParts.join(' ');
-        console.log("sortable parts: " + foo);
-        return foo;
+        var sortableObjectNumber = sortableParts.join('.');
+        console.log("sortable parts: " + sortableObjectNumber);
+        return sortableObjectNumber;
     }
 
     // Utility to clone a field's value.
