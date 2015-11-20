@@ -251,6 +251,27 @@ loanin-loaninInsuranceNoteLabel: Note
 
 #LoanOut
 loanout-sortableLoanOutNumberLabel: Sortable Loan Out Number
+loanout-lendersAuthorizerLabel: OMCA Authorizer
+loanout-lendersContactLabel: OMCA Contact
+loanout-lendersAuthorizationDateLabel: OMCA Authorization Date
+loanout-specialConditionsOfLoanLabel: Loan Terms and Conditions
+loanout-loanoutExhibitionTitleLabel: Exhibition Title
+loanout-loanoutVenuesGroupLabel: Venues
+loanout-loanoutVenueLabel: Venue
+loanout-loanoutVenueOpeningDateLabel: Opening Date
+loanout-loanoutVenueClosingDateLabel: Closing Date
+
+loanout-loanoutFeesGroupLabel: Loan Fees
+loanout-loanoutFeesCurrencyLabel: Currency
+loanout-loanoutFeesAmountLabel: Amount
+loanout-loanoutFeesDatePaidLabel: Date Paid
+loanout-loanoutCourierInfoLabel: Courier Information
+loanout-loanoutInsuranceInformationLabel: Loans Out Insurance Information
+loanout-loanoutInsuranceInsurerLabel: Insurer
+loanout-loanoutInsurancePolicyNumberLabel: Policy Number
+loanout-loanoutInsuranceRenewalDateLabel: Renewal Date
+loanout-loanoutInsuranceReferenceNumberLabel: Reference Number
+loanout-loanoutInsuranceNoteLabel: Note
 
 #Object Exit
 objectexit-depositorLabel: Recipient
