@@ -232,10 +232,22 @@ collection-object-computedCrateSearchLabel: Current box or container
 loanin-borrowersContactLabel: OMCA Contact
 loanin-borrowersAuthorizerLabel: OMCA Authorizer
 loanin-borrowersAuthorizationDateLabel: OMCA Authorization Date
+loanin-loanInConditionsLabel: Loan Terms and Conditions
 loanin-sortableLoanInNumberLabel: Sortable Loan In Number
 loanin-creditLineLabel: Credit Line
 loanin-anonymousLabel: Anonymous
 loanin-lenderNoteLabel: Lender Note
+loanin-loaninFeesGroupLabel: Loan Fees
+loanin-loaninFeesCurrencyLabel: Currency
+loanin-loaninFeesAmountLabel: Amount
+loanin-loaninFeesDatePaidLabel: Date Paid
+loanin-loaninCourierInfoLabel: Courier Information
+loanin-loaninInsuranceInformationLabel: Loans In Insurance Information
+loanin-loaninInsuranceInsurerLabel: Insurer
+loanin-loaninInsurancePolicyNumberLabel: Policy Number
+loanin-loaninInsuranceRenewalDateLabel: Renewal Date
+loanin-loaninInsuranceReferenceNumberLabel: Reference Number
+loanin-loaninInsuranceNoteLabel: Note
 
 #LoanOut
 loanout-sortableLoanOutNumberLabel: Sortable Loan Out Number

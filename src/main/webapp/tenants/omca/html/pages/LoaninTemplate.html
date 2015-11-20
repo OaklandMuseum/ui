@@ -1,4 +1,5 @@
-<div class="csc-recordEditor-header fl-container-flex header toggle csc-loanin-loaninInformation-label"></div>
+<div class="fl-container-flex fl-fix information-group">
+    <div class="csc-recordEditor-header fl-container-flex header toggle csc-loanin-loaninInformation-label"></div>
     <div class="csc-recordEditor-togglable fl-container-flex fl-fix content main">
         <div class="info-column">
             <div class="info-column2-50 fl-force-left">
@@ -94,6 +95,33 @@
                         <input type="text" class="csc-loanin-creditLine" />
                     </div>
                 </div>
+
+                <div class="info-column">
+                    <div class="info-pair">
+                        <div class="header">
+                            <div class="label csc-loanin-loaninFeesGroup-label"></div>
+                        </div>
+                        <div class="content">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <td class="label csc-loanin-loaninFeesCurrency-label"></td>
+                                        <td class="label csc-loanin-loaninFeesAmount-label"></td>
+                                        <td class="label csc-loanin-loaninFeesDatePaid-label"></td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="csc-loanin-loaninFeesGroup">
+                                        <td><select class="csc-loanin-loaninFeesCurrency input-select"><option value="">Options not loaded</option></select></td>
+                                        <td><input type="text" class="csc-loanin-loaninFeesAmount" /></td>
+                                        <td><input type="text" class="csc-loanin-loaninFeesDatePaid" /></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
             </div>
             <div class="info-column3 fl-force-left">
                 <div class="info-pair">
@@ -102,6 +130,14 @@
                     </div>
                     <div class="content">
                         <input type="checkbox" class="csc-loanin-anonymous" />
+                    </div>
+                </div>
+                <div class="info-pair">
+                    <div class="header">
+                        <div class="label csc-loanin-loaninCourierInfo-label"></div>
+                    </div>
+                    <div class="content">
+                        <input type="checkbox" class="csc-loanin-loaninCourierInfo" />
                     </div>
                 </div>
             </div>
@@ -120,7 +156,7 @@
         <div class="info-column">
             <div class="info-pair">
                 <div class="header">
-                    <div class="label"></div>
+                    <div class="label">Internal Authorization</div>
                 </div>
                 <div class="content">
                     <table>
@@ -202,3 +238,60 @@
             </div>
         </div>
     </div>
+</div>
+
+<div class="fl-container-flex fl-fix information-group">
+    <div class="csc-recordEditor-header fl-container-flex header toggle csc-loanin-loaninInsuranceInformation-label"></div>
+    <div class="csc-recordEditor-togglable fl-container-flex fl-fix content main">
+        <div class="info-column">
+            <div class="info-column2-50 fl-force-left">
+                <div class="info-pair">
+                    <div class="header">
+                        <div class="label csc-loanin-loaninInsuranceInsurer-label"></div>
+                    </div>
+                    <div class="content">
+                        <input type="text" class="csc-loanin-loaninInsuranceInsurer" />
+                    </div>
+                </div>
+
+                <div class="info-pair">
+                    <div class="header">
+                        <div class="label csc-loanin-loaninInsurancePolicyNumber-label"></div>
+                    </div>
+                    <div class="content">
+                        <input type="text" class="input-alpha csc-loanin-loaninInsurancePolicyNumber" />
+                    </div>
+                </div>
+
+                <div class="info-pair">
+                    <div class="header">
+                        <div class="label csc-loanin-loaninInsuranceRenewalDate-label"></div>
+                    </div>
+                    <div class="content">
+                        <input type="text" class="csc-loanin-loaninInsuranceRenewalDate" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-column2-50 fl-force-right">
+                <div class="info-pair">
+                    <div class="header">
+                        <div class="label csc-loanin-loaninInsuranceReferenceNumber-label"></div>
+                    </div>
+                    <div class="content">
+                        <input type="text" class="input-alpha csc-loanin-loaninInsuranceReferenceNumber" />
+                    </div>
+                </div>
+
+                <div class="info-pair">
+                    <div class="header">
+                        <div class="label csc-loanin-loaninInsuranceNote-label"></div>
+                    </div>
+                    <div class="content">
+                       <textarea rows="4" cols="30" class="input-textarea csc-loanin-loaninInsuranceNote" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
