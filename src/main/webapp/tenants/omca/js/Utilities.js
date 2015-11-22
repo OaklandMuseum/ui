@@ -2158,4 +2158,23 @@ fluid.registerNamespace("cspace.util");
         return clonedAndDeURNed;
     }
 
+    // Utility to merge two fields.
+    // Used in computedMovementSummary
+    cspace.util.mergeFields = function(field1, field2) {
+        var deURNedField1 = cspace.util.urnToString(field1);
+        var deURNedField2 = cspace.util.urnToString(field2);
+        var mergedFields = "";
+        if (deURNedField1) {
+            if (deURNedField2){
+                mergedFields = deURNedField1 + " - " + deURNedField2;
+            } else {
+                mergedFields = deURNedField1;
+            }
+        } else if (deURNedField2) {
+            mergedFields = deURNedField2;
+        }
+        console.log("merged fields: " + mergedFields);
+        return mergedFields;
+    }
+
 })(jQuery, fluid);

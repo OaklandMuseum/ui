@@ -36,6 +36,11 @@ login-submitNewPassword: Reset
 errorCalculating: %labelError calculating field value: %status
 invalidCalculatedNumber: The calculated value is not a valid number.
 
+movement-editRecord: Edit Location/Inventory Record
+movement-recordList: Related Location/Inventory Records
+movement: Location/Inventory
+movement-tab: Loc/Inv
+
 # Vocabularies
 vocab-common_ta: Common Taxa
 vocab-taxon: Local Taxa
@@ -278,6 +283,8 @@ objectexit-depositorLabel: Recipient
 objectexit-sortableExitNumberLabel: Sortable Exit Number
 
 #Movement
+movement-currentLocationFitnessLabel: Type
+movement-inventoryContactLabel: Inventory By
 movement-normalLocationLabel: Storage Location
 
 #Media
