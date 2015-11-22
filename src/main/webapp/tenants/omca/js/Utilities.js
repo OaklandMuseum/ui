@@ -2158,12 +2158,34 @@ fluid.registerNamespace("cspace.util");
         return clonedAndDeURNed;
     }
 
+    // Test to see if a value is a URN
+    var isURN = function(field){
+        if(!field) {
+            return false;
+        }
+
+        var hasURNPrefix = /^urn:cspace:/;
+        if (field.match(hasURNPrefix)) {
+            return true;
+        }
+        return false;
+    }
+
     // Utility to merge two fields.
-    // Used in computedMovementSummary
+    // Used in computed summary fields
     cspace.util.mergeFields = function(field1, field2) {
-        var deURNedField1 = cspace.util.urnToString(field1);
-        var deURNedField2 = cspace.util.urnToString(field2);
+        var deURNedField1 = field1;
+        var deURNedField2 = field2;
         var mergedFields = "";
+
+        if (isURN(field1)) {
+            var deURNedField1 = cspace.util.urnToString(field1);
+        }
+
+        if (isURN(field2)) {
+            var deURNedField2 = cspace.util.urnToString(field2);
+        }
+        
         if (deURNedField1) {
             if (deURNedField2){
                 mergedFields = deURNedField1 + " - " + deURNedField2;
