@@ -1,7 +1,7 @@
 <div class="fl-container-flex fl-fix information-group info-column">
     <div class="fl-container-flex fl-fix content main">
         <div class="info-column">
-            <div class="info-column2-50 fl-force-left">
+            <div class="info-column2-60 fl-force-left">
 
                 <div class="info-pair">
                     <div class="header">
@@ -11,18 +11,16 @@
                         <input type="text" class="csc-conditioncheck-numberPatternChooser-reference-number" />
                     </div>
                 </div>
-
-                <div class="info-pair-select">
+                <!--div class="info-pair-select">
                     <div class="header">
                         <div class="label csc-conditioncheck-objectAuditCategory-label"></div>
                     </div>
                     <div class="content">
                         <select class="csc-conditioncheck-objectAuditCategory input-select"><option value="">Options not loaded</option></select>
                     </div>
-                </div>
-
+                </div-->
                 <!-- See http://issues.collectionspace.org/browse/CSPACE-4903 -->
-                <div class="info-pair-select">
+                <div class="info-pair">
                     <div class="header">
                         <div class="label csc-conditioncheck-condition-label"></div>
                     </div>
@@ -36,16 +34,45 @@
                         </table>
                     </div>
                 </div>
-
-                <div class="info-pair">
+                <div class="info-column">
+                     <div class="info-pair">
+                        <div class="header">
+                            <div class="label csc-conditioncheck-assessmentRequestGroup-label">Assessment Request</div>
+                        </div>
+                        <div class="content">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <td class="label csc-conditioncheck-assessmentRequestedBy-label"></td>
+                                        <td class="label csc-conditioncheck-assessmentRequestRole-label"></td>
+                                        <td class="label csc-conditioncheck-assessmentRequestDateRequestedStart-label"></td>
+                                        <td class="label csc-conditioncheck-assessmentRequestDateRequestedEnd-label"></td>
+                                        <td class="label csc-conditioncheck-assessmentRequestDateRequiredStart-label"></td>
+                                        <td class="label csc-conditioncheck-assessmentRequestDateRequiredEnd-label"></td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="csc-conditioncheck-assessmentRequestGroup">
+                                        <td><input type="text" class="csc-conditioncheck-assessmentRequestedBy" /></td>
+                                        <td><select class="csc-conditioncheck-assessmentRequestRole input-select"><option value="">Options not loaded</option></select></td>
+                                        <td><input type="text" class="csc-conditioncheck-assessmentRequestDateRequestedStart" /></td>
+                                        <td><input type="text" class="csc-conditioncheck-assessmentRequestDateRequestedEnd" /></td>
+                                        <td><input type="text" class="csc-conditioncheck-assessmentRequestDateRequiredStart" /></td>
+                                        <td><input type="text" class="csc-conditioncheck-assessmentRequestDateRequiredEnd" /></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!--div class="info-pair">
                     <div class="header">
                         <div class="label csc-conditioncheck-conservationTreatmentPriority-label"></div>
                     </div>
                     <div class="content">
                         <td><select class="csc-conditioncheck-conservationTreatmentPriority input-select"><option value="">Options not loaded</option></select></td>
                     </div>
-                </div>
-               
+                </div-->
                 <div class="info-pair">
                     <div class="header">
                         <div class="label csc-conditioncheck-nextConditionCheckDate-label"></div>
@@ -67,7 +94,6 @@
                         </table>
                     </div>
                 </div>
-
                 <div class="info-pair">
                     <div class="header">
                         <div class="label csc-conditioncheck-conditionCheckAssessmentDate-label"></div>
@@ -89,7 +115,30 @@
                         </table>
                     </div>
                 </div>
-               
+               <div class="info-pair">
+                    <div class="header">
+                        <div class="label csc-conditioncheck-tempRequirement-label"></div>
+                    </div>
+                    <div class="content">
+                        <select class="csc-conditioncheck-tempRequirement input-select"><option value="">Options not loaded</option></select>
+                    </div>
+                </div>
+                <div class="info-pair">
+                    <div class="header">
+                        <div class="label csc-conditioncheck-humidityRequirement-label"></div>
+                    </div>
+                    <div class="content">
+                        <select class="csc-conditioncheck-humidityRequirement input-select"><option value="">Options not loaded</option></select>
+                    </div>
+                </div>
+                <div class="info-pair">
+                    <div class="header">
+                        <div class="label csc-conditioncheck-lightRequirement-label"></div>
+                    </div>
+                    <div class="content">
+                        <select class="csc-conditioncheck-lightRequirement input-select"><option value="">Options not loaded</option></select>
+                    </div>
+                </div>
                 <div class="info-pair">
                     <div class="header">
                         <div class="label csc-conditioncheck-updatedBy-label"></div>

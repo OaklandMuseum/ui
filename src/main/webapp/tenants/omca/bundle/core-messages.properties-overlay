@@ -294,6 +294,22 @@ media-sortableIdentificationNumberLabel: Sortable Identification Number
 
 #ConditionCheck
 conditioncheck-sortableConditionCheckRefNumberLabel: Sortable Condition Check/Assessment Reference Number
+conditioncheck-packingRecommendationsLabel: Packing/Transportation Recommendations
+conditioncheck-omcaConditionCheckMethodLabel: Condition Check/Assessment Method
+conditioncheck-assessmentRequestGroupLabel: Assessment Request
+conditioncheck-assessmentRequestedByLabel: Requested By
+conditioncheck-assessmentRequestRoleLabel: Role
+conditioncheck-assessmentRequestDateRequestedLabel: Date Requested
+conditioncheck-assessmentRequestDateRequiredLabel: Date Required
+conditioncheck-assessmentRequestDateRequestedStartLabel: Date Requested Earliest
+conditioncheck-assessmentRequestDateRequestedEndLabel: Date Requested Latest
+conditioncheck-assessmentRequestDateRequiredStartLabel: Date Required Earliest
+conditioncheck-assessmentRequestDateRequiredEndLabel: Date Required Latest
+conditioncheck-okForExhibitLoanAccessionLabel: Ok For Exhibit/Loan/Accession
+conditioncheck-needsTreatmentLabel: Needs Treatment
+conditioncheck-tempRequirementLabel: Temperature
+conditioncheck-humidityRequirementLabel: Humidity
+conditioncheck-lightRequirementLabel: Light
 
 #ValuationControl
 valuationcontrol-sortableValuationcontrolRefNumberLabel: Sortable Valuation Control Reference Number
