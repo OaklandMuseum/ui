@@ -288,6 +288,7 @@ movement-inventoryContactLabel: Inventory By
 movement-normalLocationLabel: Storage Location
 
 #Media
+media-originalFileNameLabel: Original File Name
 media-isPrimaryLabel: Is primary
 media-approveForPublicLabel: Approve for public
 media-sortableIdentificationNumberLabel: Sortable Identification Number
