@@ -157,7 +157,7 @@ collection-object-categoryLabel: Category
 collection-object-artLabel: Art
 collection-object-historyLabel: History
 collection-object-scienceLabel: Science
-collection-object-publishedOnWebLabel: Published on the Web
+collection-object-doNotPublishOnWebLabel: Do Not Publish on the Web
 collection-object-photosLabel: Photos
 collection-object-photoLabel: Photo
 collection-object-determinationHistoryGroupLabel: Determination History
@@ -189,7 +189,8 @@ collection-object-objectProductionPersonGroupLabel: Makers
 collection-object-objectProductionPersonLabel: Maker
 collection-object-objectProductionPersonRoleLabel: Maker role
 collection-object-objectCollectionInformationLabel: Field Collection Information
-collection-object-computedCurrentLocationDisplayLabel: Computed Location
+collection-object-computedCurrentLocationDisplayLabel: Computed Current Location
+collection-object-materialComponentLabel: Material Note
 
 collection-object-viewerContributionGroupLabel: Object Viewers Contribution
 collection-object-viewerNameLabel: Viewer's Name
