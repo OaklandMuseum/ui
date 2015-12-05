@@ -340,3 +340,8 @@ exhibition-exhibitionObjectSeqNumOMCALabel: Component
 exhibition-exhibitionObjectRotationOMCALabel: Element
 exhibition-exhibitionObjectNoteOMCALabel: Note
 exhibition-exhibitionCrateExistsOMCALabel: Crate Exists?
+
+
+#Conservation
+conservation-conservationNumberLabel: Conservation Reference Number
+conservation-sortableConservationNumberLabel: Sortable Conservation Reference Number
