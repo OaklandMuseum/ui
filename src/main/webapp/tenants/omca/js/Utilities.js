@@ -2171,30 +2171,19 @@ fluid.registerNamespace("cspace.util");
         return false;
     }
 
-    // Utility to merge two fields.
+    // Utility to merge multiple fields.
     // Used in computed summary fields
-    cspace.util.mergeFields = function(field1, field2) {
-        var deURNedField1 = field1;
-        var deURNedField2 = field2;
+    cspace.util.mergeFields = function() {
         var mergedFields = "";
+        var myFields = Array.prototype.slice.call(arguments);
 
-        if (isURN(field1)) {
-            var deURNedField1 = cspace.util.urnToString(field1);
-        }
-
-        if (isURN(field2)) {
-            var deURNedField2 = cspace.util.urnToString(field2);
+        for (var i = 0; i < arguments.length; i++) {
+            if(isURN(arguments[i])) {
+                myFields[i] = cspace.util.urnToString(arguments[i]);
+            }
         }
         
-        if (deURNedField1) {
-            if (deURNedField2){
-                mergedFields = deURNedField1 + " - " + deURNedField2;
-            } else {
-                mergedFields = deURNedField1;
-            }
-        } else if (deURNedField2) {
-            mergedFields = deURNedField2;
-        }
+        mergedFields = myFields.join(" - ");
         console.log("merged fields: " + mergedFields);
         return mergedFields;
     }

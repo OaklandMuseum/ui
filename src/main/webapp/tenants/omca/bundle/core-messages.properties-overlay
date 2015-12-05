@@ -201,6 +201,7 @@ collection-object-viewerReferencesLabel: Viewer's References
 collection-object-viewerReferenceLabel: Viewer's Reference
 collection-object-viewerContributionNoteLabel: Viewer's Contribution Note
 collection-object-sortableObjectNumberLabel: Sortable Identification Number
+collection-object-computedCatalogingSummaryLabel: Computed Cataloging Summary
 
 # ------------------------------------------------------------
 # Added to support the collectionobjects_anthropology domain schema extensions
