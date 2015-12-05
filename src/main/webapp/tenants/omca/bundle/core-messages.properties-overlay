@@ -248,7 +248,7 @@ loanin-loaninFeesGroupLabel: Loan Fees
 loanin-loaninFeesCurrencyLabel: Currency
 loanin-loaninFeesAmountLabel: Amount
 loanin-loaninFeesDatePaidLabel: Date Paid
-loanin-loaninCourierInfoLabel: Courier Information
+loanin-loaninCourierInfoLabel: Courier Required
 loanin-loaninInsuranceInformationLabel: Loans In Insurance Information
 loanin-loaninInsuranceInsurerLabel: Insurer
 loanin-loaninInsurancePolicyNumberLabel: Policy Number
@@ -272,7 +272,7 @@ loanout-loanoutFeesGroupLabel: Loan Fees
 loanout-loanoutFeesCurrencyLabel: Currency
 loanout-loanoutFeesAmountLabel: Amount
 loanout-loanoutFeesDatePaidLabel: Date Paid
-loanout-loanoutCourierInfoLabel: Courier Information
+loanout-loanoutCourierInfoLabel: Courier Required
 loanout-loanoutInsuranceInformationLabel: Loans Out Insurance Information
 loanout-loanoutInsuranceInsurerLabel: Insurer
 loanout-loanoutInsurancePolicyNumberLabel: Policy Number
