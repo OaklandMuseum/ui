@@ -318,6 +318,7 @@ conditioncheck-lightRequirementLabel: Light
 valuationcontrol-sortableValuationcontrolRefNumberLabel: Sortable Valuation Control Reference Number
 
 #exhibition
+exhibition-projectNumberLabel: Project Number
 exhibition-exhibitionSectionOMCAGroupLabel: Exhibition Sections
 exhibition-exhibitionSectionNameOMCALabel: Section
 exhibition-exhibitionSubsectionNameOMCALabel: Subsection
