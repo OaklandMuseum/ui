@@ -288,6 +288,7 @@ objectexit-sortableExitNumberLabel: Sortable Exit Number
 movement-currentLocationFitnessLabel: Type
 movement-inventoryContactLabel: Inventory By
 movement-normalLocationLabel: Storage Location
+movement-sortableMovementReferenceNumberLabel: Sortable Reference Number
 
 #Media
 media-originalFileNameLabel: Original File Name
