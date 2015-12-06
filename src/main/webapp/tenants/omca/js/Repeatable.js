@@ -396,20 +396,27 @@ cspace = cspace || {};
         
     };
 
-    // Function to hide radio button and delete button if there is only one child
+    // Function to hide radio button and/or delete button
     cspace.repeatableImpl.hideButtons = function (radioButtons, inputs, fetchModel) {
-        if (radioButtons.length == 1) {
-            var parentTD = $(radioButtons[0]).parent("td");
+        // hide radio button
+        if (radioButtons.length) {
+            var parentTD = $(radioButtons).parent("td");
             if (parentTD && parentTD.length) {
-                $(radioButtons[0]).parent("td").addClass("hidden");
-                $(radioButtons[0]).parents("table").find("thead tr:first-child td:first-child").addClass("hidden");
-                $(inputs[0]).parent("td").addClass("hidden");
-                $(inputs[0]).parents("table").find("thead tr:first-child td:last-child").addClass("hidden");
+                $(radioButtons).parent("td").addClass("hidden");
+                $(radioButtons).parents("table").find("thead tr:first-child td:first-child").addClass("hidden");
             } else { // Parent is li 
-                $(radioButtons[0]).removeClass("show").addClass("hidden");
-                $(inputs[0]).removeClass("show").addClass("hidden");
+                $(radioButtons).removeClass("show").addClass("hidden");
             }
-            
+        }
+        // hide delete button if there is only a single field or row
+        if (radioButtons.length == 1){
+           var parentTD = $(radioButtons).parent("td");
+            if (parentTD && parentTD.length) {
+                $(inputs).parent("td").addClass("hidden");
+                $(inputs).parents("table").find("thead tr:first-child td:last-child").addClass("hidden");
+            } else { // Parent is li 
+                $(inputs).removeClass("show").addClass("hidden");
+            }
         }
     };
     
