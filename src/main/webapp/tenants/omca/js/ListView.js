@@ -315,7 +315,11 @@ cspace = cspace || {};
             if (list.length === 0 || that.options.stubbPagination) {
                 that.applier.requestChange(fluid.model.composeSegments("list"), list);
             }
-            fluid.each(list, function (row, index) {
+            
+            // Get search results with formatted updatedAt date strings
+            var cleanDatesList = cspace.util.cleanSearchResultsDateDisplay(list);
+
+            fluid.each(cleanDatesList, function (row, index) {
                 var fullIndex = offset + index;
                 that.applier.requestChange(fluid.model.composeSegments("list", fullIndex), row);
             });

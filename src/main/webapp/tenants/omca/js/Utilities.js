@@ -2188,4 +2188,21 @@ fluid.registerNamespace("cspace.util");
         return mergedFields;
     }
 
+    // Utility that returns a formatted "clean" date for display from a search results list
+    cspace.util.cleanSearchResultsDateDisplay = function(list){
+        // match against the date + hour:minutes
+        var getTimeStamp = /^(.*T\d\d:\d\d).*Z$/;
+
+        fluid.each(list, function (row, index) {
+            if (row.summarylist && row.summarylist.updatedAt && row.summarylist.updatedAt.length){
+                var dateMatch = row.summarylist.updatedAt.match(getTimeStamp);
+                if (dateMatch && dateMatch.length > 1) {
+                    console.log("cleanDateDisplay for " + row.summary + ": " + dateMatch[1]);
+                    row.summarylist.updatedAt = dateMatch[1];
+                }
+            }
+        });
+        return list;
+    }
+
 })(jQuery, fluid);
