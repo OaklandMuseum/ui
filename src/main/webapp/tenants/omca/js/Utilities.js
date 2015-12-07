@@ -2205,4 +2205,33 @@ fluid.registerNamespace("cspace.util");
         return list;
     }
 
+    // Utility that returns a custom sorted list of Record names
+    cspace.util.customTabOrder = function(originalOrder){
+        var customOrder = [
+            "acquisition", 
+            "cataloging", 
+            "movement", 
+            "conditioncheck", 
+            "conservation", 
+            "loanin", 
+            "loanout", 
+            "media", 
+            "exhibition", 
+            "valuationcontrol", 
+            "group", 
+            "intake",  
+            "objectexit"
+        ];
+
+        // make sure our lists match
+        // TODO: if the original list is larger than the custom then append any unmatched record names to our custom
+        if (originalOrder.length != customOrder.length){
+            console.log("cspace.util.customTabArray: original tabs list and custom tabs lists do not have the same length.");
+            console.log("original list: " + originalOrder);
+            console.log("custom list:   " + customOrder);
+            return originalOrder;
+        } 
+        return customOrder;
+    }
+
 })(jQuery, fluid);
