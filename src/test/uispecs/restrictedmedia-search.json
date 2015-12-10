@@ -1,0 +1,345 @@
+{
+    ".csc-restrictedmedia-source": {
+        "decorators": [{
+            "func": "cspace.makeRepeatable",
+            "type": "fluid",
+            "options": {
+                "repeatTree": {
+                    "expander": {
+                        "tree": {
+                            ".csc-restrictedmedia-source": "${{row}.source}"
+                        },
+                        "type": "fluid.noexpand"
+                    }
+                },
+                "elPath": "sources",
+                "hidePrimary": true
+            }
+        }]
+    },
+    ".csc-restrictedmedia-subject-label": {
+        "messagekey": "restrictedmedia-subjectLabel"
+    },
+    ".csc-restrictedmedia-source-label": {
+        "messagekey": "restrictedmedia-sourceLabel"
+    },
+    ".csc-restrictedmedia-format-label": {
+        "messagekey": "restrictedmedia-formatLabel"
+    },
+    ".csc-restrictedmedia-type": {
+        "decorators": [{
+            "func": "cspace.makeRepeatable",
+            "type": "fluid",
+            "options": {
+                "repeatTree": {
+                    "expander": {
+                        "tree": {
+                            ".csc-restrictedmedia-type": {
+                                "default": "",
+                                "optionnames": ["Please select a value", "Dataset", "Document", "Moving Image", "Still Image", "Sound"],
+                                "optionlist": ["", "dataset", "document", "moving_image", "still_image", "sound"],
+                                "selection": "${{row}.type}"
+                            }
+                        },
+                        "type": "fluid.noexpand"
+                    }
+                },
+                "elPath": "types",
+                "hidePrimary": true
+            }
+        }]
+    },
+    ".csc-restrictedmedia-updatedAt-label": {
+        "messagekey": "restrictedmedia-updatedAtLabel"
+    },
+    ".csc-restrictedmedia-subject": {
+        "decorators": [{
+            "func": "cspace.makeRepeatable",
+            "type": "fluid",
+            "options": {
+                "repeatTree": {
+                    "expander": {
+                        "tree": {
+                            ".csc-restrictedmedia-subject": "${{row}.subject}"
+                        },
+                        "type": "fluid.noexpand"
+                    }
+                },
+                "elPath": "subjects",
+                "hidePrimary": true
+            }
+        }]
+    },
+    ".csc-restrictedmedia-updatedBy-label": {
+        "messagekey": "restrictedmedia-updatedByLabel"
+    },
+    ".csc-restrictedmedia-filename-label": {
+        "messagekey": "restrictedmedia-filenameLabel"
+    },
+    ".csc-restrictedmedia-title-label": {
+        "messagekey": "restrictedmedia-titleLabel"
+    },
+    ".csc-restrictedmedia-identificationNumber": {
+        "decorators": [{
+            "func": "cspace.makeRepeatable",
+            "type": "fluid",
+            "options": {
+                "repeatTree": {
+                    "expander": {
+                        "tree": {
+                            ".csc-restrictedmedia-identificationNumber": "${{row}.identificationNumber}"
+                        },
+                        "type": "fluid.noexpand"
+                    }
+                },
+                "elPath": "identificationNumbers",
+                "hidePrimary": true
+            }
+        }]
+    },
+    ".csc-restrictedmedia-format": {
+        "decorators": [{
+            "func": "cspace.makeRepeatable",
+            "type": "fluid",
+            "options": {
+                "repeatTree": {
+                    "expander": {
+                        "tree": {
+                            ".csc-restrictedmedia-format": "${{row}.format}"
+                        },
+                        "type": "fluid.noexpand"
+                    }
+                },
+                "elPath": "formats",
+                "hidePrimary": true
+            }
+        }]
+    },
+    ".csc-restrictedmedia-creator": {
+        "decorators": [{
+            "func": "cspace.makeRepeatable",
+            "type": "fluid",
+            "options": {
+                "repeatTree": {
+                    "expander": {
+                        "tree": {
+                            ".csc-restrictedmedia-creator": {
+                                "decorators": [{
+                                    "func": "cspace.autocomplete",
+                                    "type": "fluid",
+                                    "options": {
+                                        "queryUrl": "../../../tenant/core/restrictedmedia/autocomplete/creator",
+                                        "vocabUrl": "../../../tenant/core/restrictedmedia/source-vocab/creator"
+                                    }
+                                }],
+                                "value": "${{row}.creator}"
+                            }
+                        },
+                        "type": "fluid.noexpand"
+                    }
+                },
+                "elPath": "creators",
+                "hidePrimary": true
+            }
+        }]
+    },
+    ".csc-restrictedmedia-rightsHolder": {
+        "decorators": [{
+            "func": "cspace.makeRepeatable",
+            "type": "fluid",
+            "options": {
+                "repeatTree": {
+                    "expander": {
+                        "tree": {
+                            ".csc-restrictedmedia-rightsHolder": {
+                                "decorators": [{
+                                    "func": "cspace.autocomplete",
+                                    "type": "fluid",
+                                    "options": {
+                                        "queryUrl": "../../../tenant/core/restrictedmedia/autocomplete/rightsHolder",
+                                        "vocabUrl": "../../../tenant/core/restrictedmedia/source-vocab/rightsHolder"
+                                    }
+                                }],
+                                "value": "${{row}.rightsHolder}"
+                            }
+                        },
+                        "type": "fluid.noexpand"
+                    }
+                },
+                "elPath": "rightsHolders",
+                "hidePrimary": true
+            }
+        }]
+    },
+    ".csc-restrictedmedia-title": {
+        "decorators": [{
+            "func": "cspace.makeRepeatable",
+            "type": "fluid",
+            "options": {
+                "repeatTree": {
+                    "expander": {
+                        "tree": {
+                            ".csc-restrictedmedia-title": "${{row}.title}"
+                        },
+                        "type": "fluid.noexpand"
+                    }
+                },
+                "elPath": "titles",
+                "hidePrimary": true
+            }
+        }]
+    },
+    ".csc-restrictedmedia-publisher-label": {
+        "messagekey": "restrictedmedia-publisherLabel"
+    },
+    ".csc-restrictedmedia-updatedAtStart-label": {
+        "messagekey": "restrictedmedia-updatedAtStartLabel"
+    },
+    ".csc-restrictedmedia-dateEnd": {
+        "decorators": [{
+            "func": "cspace.datePicker",
+            "type": "fluid"
+        }],
+        "value": "${dateEnd}"
+    },
+    ".csc-restrictedmedia-publisher": {
+        "decorators": [{
+            "func": "cspace.makeRepeatable",
+            "type": "fluid",
+            "options": {
+                "repeatTree": {
+                    "expander": {
+                        "tree": {
+                            ".csc-restrictedmedia-publisher": {
+                                "decorators": [{
+                                    "func": "cspace.autocomplete",
+                                    "type": "fluid",
+                                    "options": {
+                                        "queryUrl": "../../../tenant/core/restrictedmedia/autocomplete/publisher",
+                                        "vocabUrl": "../../../tenant/core/restrictedmedia/source-vocab/publisher"
+                                    }
+                                }],
+                                "value": "${{row}.publisher}"
+                            }
+                        },
+                        "type": "fluid.noexpand"
+                    }
+                },
+                "elPath": "publishers",
+                "hidePrimary": true
+            }
+        }]
+    },
+    ".csc-restrictedmedia-rightsHolder-label": {
+        "messagekey": "restrictedmedia-rightsHolderLabel"
+    },
+    ".csc-restrictedmedia-date-label": {
+        "messagekey": "restrictedmedia-dateLabel"
+    },
+    ".csc-restrictedmedia-updatedAtEnd": {
+        "decorators": [{
+            "func": "cspace.datePicker",
+            "type": "fluid"
+        }],
+        "value": "${updatedAtEnd}"
+    },
+    ".csc-restrictedmedia-updatedAtStart": {
+        "decorators": [{
+            "func": "cspace.datePicker",
+            "type": "fluid"
+        }],
+        "value": "${updatedAtStart}"
+    },
+    ".csc-restrictedmedia-type-label": {
+        "messagekey": "restrictedmedia-typeLabel"
+    },
+    ".csc-restrictedmedia-updatedBy": {
+        "decorators": [{
+            "func": "cspace.makeRepeatable",
+            "type": "fluid",
+            "options": {
+                "repeatTree": {
+                    "expander": {
+                        "tree": {
+                            ".csc-restrictedmedia-updatedBy": "${{row}.updatedBy}"
+                        },
+                        "type": "fluid.noexpand"
+                    }
+                },
+                "elPath": "updatedBys",
+                "hidePrimary": true
+            }
+        }]
+    },
+    ".csc-restrictedmedia-updatedAtEnd-label": {
+        "messagekey": "restrictedmedia-updatedAtEndLabel"
+    },
+    ".csc-restrictedmedia-dateStart-label": {
+        "messagekey": "restrictedmedia-dateStartLabel"
+    },
+    ".csc-restrictedmedia-dateEnd-label": {
+        "messagekey": "restrictedmedia-dateEndLabel"
+    },
+    ".csc-restrictedmedia-filename": {
+        "decorators": [{
+            "func": "cspace.makeRepeatable",
+            "type": "fluid",
+            "options": {
+                "repeatTree": {
+                    "expander": {
+                        "tree": {
+                            ".csc-restrictedmedia-filename": "${{row}.filename}"
+                        },
+                        "type": "fluid.noexpand"
+                    }
+                },
+                "elPath": "filenames",
+                "hidePrimary": true
+            }
+        }]
+    },
+    ".csc-restrictedmedia-dateStart": {
+        "decorators": [{
+            "func": "cspace.datePicker",
+            "type": "fluid"
+        }],
+        "value": "${dateStart}"
+    },
+    ".csc-restrictedmedia-identificationNumber-label": {
+        "messagekey": "restrictedmedia-identificationNumberLabel"
+    },
+    ".csc-restrictedmedia-language": {
+        "decorators": [{
+            "func": "cspace.makeRepeatable",
+            "type": "fluid",
+            "options": {
+                "repeatTree": {
+                    "expander": {
+                        "tree": {
+                            ".csc-restrictedmedia-language": {
+                                "decorators": [{
+                                    "func": "cspace.termList",
+                                    "type": "fluid",
+                                    "options": {
+                                        "root": "{row}",
+                                        "elPath": "language",
+                                        "termListType": "language"
+                                    }
+                                }]
+                            }
+                        },
+                        "type": "fluid.noexpand"
+                    }
+                },
+                "elPath": "languages",
+                "hidePrimary": true
+            }
+        }]
+    },
+    ".csc-restrictedmedia-language-label": {
+        "messagekey": "restrictedmedia-languageLabel"
+    },
+    ".csc-restrictedmedia-creator-label": {
+        "messagekey": "restrictedmedia-creatorLabel"
+    }
+}

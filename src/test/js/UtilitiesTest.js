@@ -309,6 +309,7 @@ var utilitiesTester = function ($) {
         "concept": ["create", "read", "update", "delete", "list"],
         "movement": ["create", "read", "update", "delete", "list"],
         "objectexit": ["create", "read", "update", "delete", "list"],
+        "media": ["create", "read", "update", "delete", "list"],
         "objects": ["create", "read", "update", "delete", "list"],
         "valuationcontrol": ["create", "read", "update", "delete", "list"]
     };
@@ -505,6 +506,7 @@ var utilitiesTester = function ($) {
                 "cataloging",
                 "movement",
                 "objectexit",
+                "restrictedmedia",
                 "media",
                 "valuationcontrol"
             ],
@@ -517,6 +519,7 @@ var utilitiesTester = function ($) {
                 "acquisition",
                 "movement",
                 "objectexit",
+                "restrictedmedia",
                 "media",
                 "valuationcontrol"
             ],
@@ -544,6 +547,7 @@ var utilitiesTester = function ($) {
                 "cataloging",
                 "movement",
                 "objectexit",
+                "restrictedmedia",
                 "media",
                 "valuationcontrol"
             ],
@@ -556,6 +560,7 @@ var utilitiesTester = function ($) {
                 "acquisition",
                 "movement",
                 "objectexit",
+                "restrictedmedia",
                 "media",
                 "valuationcontrol"
             ],
@@ -584,6 +589,7 @@ var utilitiesTester = function ($) {
                 "cataloging",
                 "movement",
                 "objectexit",
+                "restrictedmedia",
                 "media",
                 "valuationcontrol"
             ],
@@ -597,6 +603,7 @@ var utilitiesTester = function ($) {
                 "media",
                 "movement",
                 "objectexit",
+                "restrictedmedia",
                 "valuationcontrol"
             ],
             "vocabularies": [

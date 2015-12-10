@@ -49,6 +49,10 @@
             },
             {
                 "permission": "read",
+                "resourceName": "restrictedmedia"
+            },
+            {
+                "permission": "read",
                 "resourceName": "concept"
             },
             {
