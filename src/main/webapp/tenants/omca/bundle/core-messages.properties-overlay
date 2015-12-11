@@ -346,3 +346,9 @@ exhibition-exhibitionCrateExistsOMCALabel: Crate Exists?
 #Conservation
 conservation-conservationNumberLabel: Conservation Reference Number
 conservation-sortableConservationNumberLabel: Sortable Conservation Reference Number
+
+#Restrictedmedia
+restrictedmedia-originalFileNameLabel: Original File Name
+restrictedmedia-isPrimaryLabel: Is primary
+restrictedmedia-approveForPublicLabel: Approve for public
+restrictedmedia-sortableIdentificationNumberLabel: Sortable Identification Number

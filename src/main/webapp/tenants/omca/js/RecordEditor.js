@@ -1630,6 +1630,43 @@ cspace = cspace || {};
         }
     });
 
+    fluid.demands("cspace.recordEditor.recordRenderer", ["cspace.recordEditor", "restrictedmedia.read"], {
+        options: {
+            selectors: {
+                uploader: ".csc-media-upload",
+                mediaImage: ".csc-media-image"
+            },
+            selectorsToIgnore: "uploader",
+            styles: {
+                mediaImage: "cs-media-image"
+            },
+            components: {
+                uploader: {
+                    type: "cspace.mediaUploader",
+                    container: "{recordRenderer}.dom.uploader",
+                    options: {
+                        model: "{recordEditor}.model",
+                        applier: "{recordEditor}.applier",
+                        listeners: {
+                            onLink: "{recordEditor}.events.onSave.fire",
+                            onRemove: "{recordRenderer}.refreshView"
+                        },
+                        urls: {
+                            expander: {
+                                type: "fluid.deferredInvokeCall",
+                                func: "cspace.util.urlBuilder",
+                                args: {
+                                    upload: "%tenant/%tname/uploads/"
+                                }
+                            }
+                        }
+                    },
+                    createOnEvent: "afterRender"
+                }
+            }
+        }
+    });
+
     fluid.demands("cspace.recordEditor.recordRenderer", ["cspace.recordEditor", "cataloging.read"], {
         options: {
             selectors: {
@@ -1783,7 +1820,7 @@ cspace = cspace || {};
     };
 
     cspace.recordEditor.recordRenderer.provideProduceTree = function (recordType) {
-        return recordType === "media" ? "cspace.recordEditor.recordRenderer.produceTreeMedia" : "cspace.recordEditor.recordRenderer.produceTree";
+        return (recordType === "media" || recordType === "restrictedmedia") ? "cspace.recordEditor.recordRenderer.produceTreeMedia" : "cspace.recordEditor.recordRenderer.produceTree";
     };
 
     cspace.recordEditor.recordRenderer.produceTreeMedia = function (that) {
