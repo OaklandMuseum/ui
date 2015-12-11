@@ -1,0 +1,123 @@
+{
+    "termsUsed": [],
+    "relations": {},
+    "csid": "123456789",
+    "fields": {
+        "blobCsid": "aa5d64e6-8e45-41f0-aa57",
+        "blobs": [
+            {
+                "updatedAt": "2011-05-10T15:10:33Z",
+                "height": "67",
+                "createdAt": "2011-05-10T15:10:33Z",
+                "name": "CSpaceLogo.png",
+                "width": "349",
+                "length": "2108",
+                "mimeType": "image/png",
+                "depth": "8",
+                "imgOrig": "../../../../test/data/images/Original.png",
+                "imgThumb": "../../../../test/data/images/Thumbnail.jpeg",
+                "imgMedium": "../../../../test/data/images/Medium.jpeg",
+                "measuredPartGroup": [
+                    {
+                        "dimensionSummary": "This is dimension summary",
+                        "_primary": true,
+                        "measuredPart": "frame",
+                        "dimensionSubGroup": [
+                            {
+                                "_primary": true,
+                                "dimension": "area",
+                                "measuredBy": "urn:cspace:org.collectionspace.demo:personauthority:name(person):person:name(johnsmith)'John+Smith'",
+                                "measurementUnit": "carats",
+                                "measurementMethod": "protractor",
+                                "value": "123",
+                                "valueDate": "July 2, 2010",
+                                "valueQualifier": "exact"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "csid": "123456789",
+        "contributor": "urn:cspace:org.collectionspace.demo:personauthority:name(person):person:name(johnsmith)'John+Smith'",
+        "copyrightStatement": "This is copyright",
+        "coverage": "This is a place authority",
+        "creator": "urn:cspace:org.collectionspace.demo:personauthority:name(person):person:name(johnsmith)'John+Smith'",
+        "dates": [
+            {
+                "date": "July 1, 2010",
+                "_primary": false
+            },
+            {
+                "date": "July 2, 2010",
+                "_primary": true
+            }
+        ],
+        "dateCreated": "July 2, 2011",
+        "dateModified": "July 3, 2011",
+        "description": "This is description",
+        "measuredPartGroup": [
+            {
+                "dimensionSummary": "This is dimension summary",
+                "_primary": true,
+                "measuredPart": "frame",
+                "dimensionSubGroup": [
+                    {
+                        "_primary": true,
+                        "dimension": "area",
+                        "measuredBy": "urn:cspace:org.collectionspace.demo:personauthority:name(person):person:name(johnsmith)'John+Smith'",
+                        "measurementUnit": "carats",
+                        "measurementMethod": "protractor",
+                        "value": "123",
+                        "valueDate": "July 2, 2010",
+                        "valueQualifier": "exact"
+                    }
+                ]
+            }
+        ],
+        "filename": "sample_file.jpg",
+        "format": "JPEG Image",
+        "identificationNumber": "MHR2015.5",
+        "languages": [
+            {
+                "language": "ancientgreek",
+                "_primary": false
+            },
+            {
+                "language": "ancientgreek",
+                "_primary": true
+            }
+        ],
+        "location": "someserve.org/img/sample_file.jpg",
+        "publisher": "urn: cspace: org.collectionspace.demo: personauthority: name(person): person: name(johnjohn)'John+John'",
+        "relations": [
+            {
+                "relation": "Some relation",
+                "_primary": false
+            },
+            {
+                "relation": "Primary relation",
+                "_primary": true
+            }
+        ],
+        "rightsHolder": "urn: cspace: org.collectionspace.demo: personauthority: name(person): person: name(jimnabors)'Jim+Nabors'",
+        "source": "This is source",
+        "subjects": [
+            {
+                "subject": "This is topic",
+                "_primary": true
+            }
+        ],
+        "title": "Sample File",
+        "types": [
+            {
+                "type": "document",
+                "_primary": true
+            },
+            {
+                "type": "dataset",
+                "_primary": false
+            }
+        ]
+    }
+}

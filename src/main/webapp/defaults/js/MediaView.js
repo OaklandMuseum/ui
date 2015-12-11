@@ -47,11 +47,16 @@ cspace = cspace || {};
             // DataSource to get the media image
             relatedMedia: {
                 type: "cspace.mediaView.dataSource"
+            },
+            // DataSource to get the restricted media image
+            relatedRestrictedMedia: {
+                type: "cspace.mediaView.dataSourceRestricted"
             }
         },
         model: {
             primaryMedia: undefined,
             relatedMedia: [],
+            relatedRestrictedMedia: [],
             index: 0
         },
         strings: {},
@@ -62,11 +67,13 @@ cspace = cspace || {};
             mediaUpdated: {
                 events: {
                     primary: "{cspace.mediaView}.events.primaryUpdated",
-                    related: "{cspace.mediaView}.events.relatedUpdated"
+                    related: "{cspace.mediaView}.events.relatedUpdated",
+                    relatedrestricted: "{cspace.mediaView}.events.relatedRestrictedUpdated"
                 }
             },
             primaryUpdated: null,
-            relatedUpdated: null
+            relatedUpdated: null,
+            relatedRestrictedUpdated: null
         },
         listeners: {
             prepareModelForRender: "{cspace.mediaView}.prepareModelForRender",
@@ -82,7 +89,8 @@ cspace = cspace || {};
                 }
             })
         },
-        relatedMediaUrl: cspace.componentUrlBuilder("%tenant/%tname/%primary/media/%csid?pageNum=0&pageSize=40")
+        relatedMediaUrl: cspace.componentUrlBuilder("%tenant/%tname/%primary/media/%csid?pageNum=0&pageSize=40"),
+        relatedRestrictedMediaUrl: cspace.componentUrlBuilder("%tenant/%tname/%primary/restrictedmedia/%csid?pageNum=0&pageSize=40")
     });
 
     // Render tree for the MediaView
@@ -185,6 +193,9 @@ cspace = cspace || {};
             fluid.each(that.model.relatedMedia, function (thisMedia) {
                 media.push(thisMedia);
             });
+            fluid.each(that.model.relatedRestrictedMedia, function (thisMedia) {
+                media.push(thisMedia);
+            });
             var current = fluid.get(media, that.model.index);
             if (!current) {
                 that.applier.requestChange("index", 0);
@@ -249,6 +260,18 @@ cspace = cspace || {};
             });
         };
 
+        // Function to return related restricted media for the record
+        that.getRelatedRestrictedMedia = function (callback) {
+            that.relatedRestrictedMedia.get({
+                csid: fluid.get(that.globalModel.model, "baseModel.primaryCsid")
+            }, function (data) {
+                that.applier.requestChange("relatedRestrictedMedia", fluid.transform(fluid.get(data, "items"), function (item) {
+                    return item.summarylist;
+                }));
+                callback();
+            });
+        };
+
         that.getAllMedia = function () {
             if (!fluid.get(that.globalModel.model, "baseModel.primaryCsid")) {
                 that.refreshView();
@@ -259,6 +282,9 @@ cspace = cspace || {};
             });
             that.getRelatedMedia(function () {
                 that.events.relatedUpdated.fire();
+            });
+            that.getRelatedRestrictedMedia(function () {
+                that.events.relatedRestrictedUpdated.fire();
             });
         };
 
@@ -283,13 +309,14 @@ cspace = cspace || {};
         // function to return if there is any media in the mediaView
         function hasMedia (related) {
             var category = that.recordTypes[related] || [];
-            return $.inArray("media", category) > -1;
+            return ($.inArray("media", category) > -1 || $.inArray("restrictedmedia", category) > -1);
         }
 
         // Event which fires when relations are updated for the current record
         that.globalEvents.events.relationsUpdated.addListener(function (related) {
-            if (related === "media" || hasMedia(related)) {
+            if (related === "media" || related === "restrictedmedia" || hasMedia(related)) {
                 that.getRelatedMedia(that.render);
+                that.getRelatedRestrictedMedia(that.render);
             }
         });
         // Event which fires when the main record image is updated
@@ -320,6 +347,30 @@ cspace = cspace || {};
                 csid: "%csid"
             },
             targetTypeName: "cspace.mediaView.dataSource"
+        }
+    });
+
+    // Demands to overwrite dataSourceRestricted for local testing.
+    fluid.demands("cspace.mediaView.dataSourceRestricted",  ["cspace.localData", "cspace.mediaView"], {
+        funcName: "cspace.mediaView.testDataSource",
+        args: {
+            targetTypeName: "cspace.mediaView.testDataSource",
+            termMap: {
+                recordType: "%recordType"
+            }
+        }
+    });
+
+    // Datasource to get related Restricted images to the record
+    fluid.demands("cspace.mediaView.dataSourceRestricted", "cspace.mediaView", {
+        funcName: "cspace.URLDataSource",
+        args: {
+            url: "{cspace.mediaView}.options.relatedRestrictedMediaUrl",
+            termMap: {
+                primary: "{cspace.sidebar}.options.primary",
+                csid: "%csid"
+            },
+            targetTypeName: "cspace.mediaView.dataSourceRestricted"
         }
     });
 

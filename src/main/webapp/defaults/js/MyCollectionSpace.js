@@ -34,6 +34,7 @@ cspace = cspace || {};
             conditioncheck: ".csc-myCollectionSpace-conditioncheck-group",
             objectexit: ".csc-myCollectionSpace-objectexit-group",
             media: ".csc-myCollectionSpace-media-group",
+            restrictedmedia: ".csc-myCollectionSpace-restrictedmedia-group",
             group: ".csc-myCollectionSpace-group-group",
             valuationcontrol: ".csc-myCollectionSpace-valuationcontrol-group",
             exhibition: ".csc-myCollectionSpace-exhibition-group",

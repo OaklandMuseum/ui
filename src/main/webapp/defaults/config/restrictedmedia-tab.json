@@ -1,0 +1,46 @@
+{
+    "pageBuilderIO": {
+        "options": {
+            "recordType": "restrictedmedia",
+            "schema": {
+                "restrictedmedia": null
+            }
+        }
+    },
+    "pageBuilder": {
+        "options": {
+            "pageType": "restrictedmedia-tab",
+            "selectors": {
+                "relatedRecordsTab": ".csc-relatedRecordsTab-restrictedmedia"
+            },
+            "components": {
+                "relatedRecordsTab": {
+                    "type": "cspace.relatedRecordsTab",
+                    "options": {
+                        "primary": "{pageBuilder}.options.primary",
+                        "related": "{pageBuilder}.options.related",
+                        "csid": "{globalModel}.model.primaryModel.csid",
+                        "strings": {
+                            "editRecord": "restrictedmedia-editRecord",
+                            "recordList": "restrictedmedia-recordList"
+                        },
+                        "components": {
+                            "relatedRecordsRecordEditor": {
+                                "options": {
+                                    "selectors": {
+                                        "identificationNumber": ".csc-restrictedmedia-identificationNumber"
+                                    },
+                                    "originalMediaDimensions": {
+                                        "width": "800",
+                                        "height": "600"
+                                    },
+                                    "uispec": "{pageBuilder}.options.uispec.details"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

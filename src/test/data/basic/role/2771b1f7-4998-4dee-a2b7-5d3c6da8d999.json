@@ -49,6 +49,10 @@
             },
             {
                 "permission": "delete",
+                "resourceName": "restrictedmedia"
+            },
+            {
+                "permission": "delete",
                 "resourceName": "concept"
             },
             {

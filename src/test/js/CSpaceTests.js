@@ -50,6 +50,7 @@ cspace.tests.sampleSchema = {
                     "acquisition",
                     "movement",
                     "objectexit",
+                    "restrictedmedia",
                     "media",
                     "valuationcontrol"
                 ],
@@ -72,6 +73,7 @@ cspace.tests.sampleSchema = {
             "cataloging",
             "movement",
             "objectexit",
+            "restrictedmedia",
             "media",
             "valuationcontrol"
         ],
@@ -289,6 +291,7 @@ cspace.tests.sampleUserPerms = {
         "loanin": ["read", "list"],
         "acquisition": [],
         "conditioncheck": [],
+        "restrictedmedia": [],
         "organization": ["create", "read", "update", "delete", "list"],
         "place": ["create", "read", "update", "delete", "list"],
         "work": ["create", "read", "update", "delete", "list"],
@@ -309,6 +312,7 @@ cspace.tests.fullPerms = {
         "conditioncheck": ["create", "read", "update", "delete", "list"],
         "movement": ["create", "read", "update", "delete", "list"],
         "objectexit": ["create", "read", "update", "delete", "list"],
+        "restrictedmedia": ["create", "read", "update", "delete", "list"],
         "person": ["create", "read", "update", "delete", "list"],
         "organization": ["create", "read", "update", "delete", "list"],
         "place": ["create", "read", "update", "delete", "list"],
