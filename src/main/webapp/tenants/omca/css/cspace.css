@@ -2607,3 +2607,25 @@ li.cs-repeatable-repeat .stretched .cs-termList {
 .matched-value-conflict {
     border: 2px solid red !important;
 }
+/* Structured date parser */
+.cs-structuredDate-parseStatus {
+   position: relative;
+   top: -9px;
+   height: 14px;
+   padding-top: 4px;
+   font-size: 11px;
+}
+.cs-structuredDate-parseStatus.error {
+   background: url(../images/warning.png) no-repeat top left;
+   padding-left: 18px;
+}
+table#csc-claim-tasks tbody td:nth-child(1) {
+    width:30%;
+    padding-left:6px;
+}
+table#csc-claim-tasks tbody td:nth-child(2) {
+    width:21px;
+}
+table#csc-claim-tasks tbody td:nth-child(2) input {
+    margin:6px;
+}

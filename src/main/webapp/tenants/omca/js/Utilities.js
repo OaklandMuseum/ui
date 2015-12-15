@@ -2220,7 +2220,9 @@ fluid.registerNamespace("cspace.util");
             "valuationcontrol", 
             "group", 
             "intake",  
-            "objectexit"
+            "objectexit",
+            "restrictedmedia",
+            "claim"
         ];
 
         // make sure our lists match

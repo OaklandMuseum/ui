@@ -352,3 +352,70 @@ restrictedmedia-originalFileNameLabel: Original File Name
 restrictedmedia-isPrimaryLabel: Is primary
 restrictedmedia-approveForPublicLabel: Approve for public
 restrictedmedia-sortableIdentificationNumberLabel: Sortable Identification Number
+
+#Claim
+claim-claimNumberLabel: Reference number
+claim-sortableClaimNumberLabel: Sortable Reference number
+claim-sitesInvolvedGroupLabel: Inventory/Summary Involved
+claim-siteOrPlaceNameLabel: Inventory/Summary
+claim-initialResponseDatesGroupLabel: Date of Claim
+
+claim-claimClaimantOMCAGroupLabel: Requester/Claimant(s)
+claim-filedByOMCALabel: Filed by
+claim-filedOnBehalfOfOMCALabel: On behalf of
+claim-federallyRecognizedOMCALabel: Federally recognized?
+claim-claimantNoteOMCALabel: Note
+claim-transactionTypeLabel: Transaction type
+claim-requestsGroupLabel: Requests
+claim-detailsOfRequestLabel: Details of request
+claim-dateOfRequestLabel: Date of request
+claim-dateFulfilledLabel: Date fulfilled
+claim-notesOnRequestLabel: Notes on requests
+claim-noteOnRequestLabel: Note on requests
+claim-claimNumberOMCALabel: Claim number
+
+claim-deaccessionResearchCompleteGroupLabel: Date deaccession research complete
+claim-deaccessionResearchCompleteDateLabel: Date
+claim-deaccessionResearchCompleteNoteLabel: Note
+
+claim-sentCollectionsCommitteeGroupLabel: Date send to Collections Committee
+claim-sentCollectionsCommitteeDateLabel: Date
+claim-sentCollectionsCommitteeNoteLabel: Note
+
+claim-recommendationCollectionsCommitteeGroupLabel: Recommendation of Collections Committee
+claim-recommendationCollectionsCommitteeDateLabel: Date
+claim-recommendationCollectionsCommitteeRecommendationLabel: Recommendations
+
+claim-sentExecutiveTeamGroupLabel: Date sent to Executive Team/ED
+claim-sentExecutiveTeamDateLabel: Date
+claim-sentExecutiveTeamNoteLabel: Note
+
+claim-recommendationExecutiveTeamGroupLabel: Recommendation of Executive Team/ED
+claim-recommendationExecutiveTeamDateLabel: Date
+claim-recommendationExecutiveTeamRecommendationLabel: Recommendations
+
+claim-sentOMCABoardGroupLabel: Sent to OMCA Board
+claim-sentOMCABoardDateLabel: Date
+claim-sentOMCABoardNoteLabel: Note
+
+claim-recommendationOMCABoardGroupLabel: Recommendation of OMCA Board
+claim-recommendationOMCABoardDateLabel: Date
+claim-recommendationOMCABoardRecommendationLabel: Recommendations
+
+claim-claimantNotifiedClaimStatusGroupLabel: Date claimant notified of claim status
+claim-claimantNotifiedClaimStatusDateLabel: Date
+claim-claimantNotifiedClaimStatusNoteLabel: Note
+
+claim-claimProcessNotesLabel: Notes on claim process
+claim-claimProcessNoteLabel: Note on claim process
+
+
+
+
+
+
+
+
+
+
+
