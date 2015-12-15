@@ -2042,14 +2042,32 @@ fluid.registerNamespace("cspace.util");
     fluid.defaults("cspace.util.checkIDValues", {
         gradeNames: ["fluid.viewComponent"],
         selectors: {
-            currentIDValue: ".csc-object-identification-object-number",
-            appURL: "../../../tenant/omca/cataloging/search?query=",
+            currentIDValue: ".match-id",
+            appURL: "../../../tenant/omca/PROCEDURE/search?query=",
             errorMatch: "matched-value-conflict"
         }
     });
     cspace.util.checkIDValues = function(container, options) {
         var that = fluid.initView("cspace.util.checkIDValues", container, options);
         var currentIDValueElem = that.locate("currentIDValue");
+        var currentIDValueElemID = $(currentIDValueElem).attr("id");
+        var getProcedure = $(".id-container").attr("id");
+        var procedures = {
+            "cataloging": "objectNumber", 
+            "acquisition": "acquisitionReferenceNumber",
+            "claim": "claimNumber",
+            "conditioncheck": "conditionCheckRefNumber",
+            "conservation": "conservationNumber",
+            "exhibition": "exhibitionNumber",
+            "intake": "entryNumber",
+            "loanin": "loanInNumber",
+            "loanout": "loanOutNumber",
+            "media": "identificationNumber",
+            "movement": "movementReferenceNumber",
+            "objectexit": "exitNumber",
+            "restrictedmedia": "identificationNumber",
+            "valuationcontrol": "valuationcontrolRefNumber"
+        }
         
         if (currentIDValueElem && currentIDValueElem.length) {
 
@@ -2058,17 +2076,19 @@ fluid.registerNamespace("cspace.util");
             $(currentIDValueElem).parents(".info-pair").eq(0).append(spanHTML);
             var messageBox = $("#cs-id-message-box");
 
-            var url = that.options.selectors.appURL;
+            var url = that.options.selectors.appURL.replace("PROCEDURE", getProcedure);
+
             var originalIDValue = $(currentIDValueElem).val();
             var updatedIDValue = "";
             console.log("checkIDValue original: " + originalIDValue);
 
             var success = function(data){
+                updatedIDValue = $(currentIDValueElem).val();
                 console.log("retrieved data length: " + data["results"].length);
                 if (data["results"].length && updatedIDValue != originalIDValue){
                     console.log("Matched record with ID (" + updatedIDValue + ") with CSID: " + data["results"][0]["csid"]);
                     $(currentIDValueElem).addClass(that.options.selectors.errorMatch);
-                    $(messageBox).html("The number <a target='_blank' href='cataloging.html?csid=" + data["results"][0]["csid"] + "'>"+ updatedIDValue + "</a> is already in use.").show();
+                    $(messageBox).html("The ID number <a target='_blank' href='" + getProcedure + ".html?csid=" + data["results"][0]["csid"] + "'>("+ updatedIDValue + ")</a> is already in use.").show();
                 } else {
                     console.log("there is no record with matching ID: " + updatedIDValue);
                     $(currentIDValueElem).removeClass(that.options.selectors.errorMatch);
@@ -2081,22 +2101,25 @@ fluid.registerNamespace("cspace.util");
             };
 
             // Add event handler when input field value changes
-            $(".csc-object-identification-object-number").change(function() {
-                var updatedIDValue = $(currentIDValueElem).val();
-                console.log("checkIDValue updated: " + updatedIDValue);
+            $(currentIDValueElemID).change(function() {
+                // only trigger if we know the ID name of the procedure
+                if(procedures.hasOwnProperty(getProcedure)){
+                    var updatedIDValue = $(currentIDValueElem).val();
+                    console.log("checkIDValue updated: " + updatedIDValue);
 
-                // Check to see if updatedIDValue already exists
-                if (updatedIDValue && updatedIDValue != "" && updatedIDValue.length){
-                    $.ajax({
-                        url: url,
-                        type: "POST",
-                        dataType: "json",
-                        data: '{"fields":{"objectNumbers":[{"_primary":true,"objectNumber":"'+updatedIDValue+'"}]},"operation":"or"}',
-                        success: success,
-                        error: printError
-                    }).fail(function() {
-                        console.log("error retrieving data");
-                    });
+                    // Check to see if updatedIDValue already exists
+                    if (updatedIDValue && updatedIDValue != "" && updatedIDValue.length){
+                        $.ajax({
+                            url: url,
+                            type: "POST",
+                            dataType: "json",
+                            data: '{"fields":{"' + procedures[getProcedure] + '":[{"_primary":true,"' + procedures[getProcedure] + '":"'+updatedIDValue+'"}]},"operation":"or"}',
+                            success: success,
+                            error: printError
+                        }).fail(function() {
+                            console.log("error retrieving data");
+                        });
+                    }
                 }
 
             });

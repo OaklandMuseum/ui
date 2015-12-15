@@ -180,6 +180,7 @@ cspace = cspace || {};
                     selectors: {
                         currentIDValue: "{cspace.recordEditor}.options.selectors.currentIDValue",
                         appURL: "{cspace.recordEditor}.options.selectors.appURL",
+                        errorMatch: "{cspace.recordEditor}.options.selectors.errorMatch"
                     }
                 },
                 createOnEvent: "afterRecordRender"
