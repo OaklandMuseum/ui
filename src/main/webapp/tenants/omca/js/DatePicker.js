@@ -323,6 +323,9 @@ cspace = cspace || {};
                 that.container.val(dateMatch[1]);
             }
         }
+
+        // For some reason the thead of the Google date picker table was hidden
+        $("tr.goog-date-picker-head td").show();
     };
     
 })(jQuery, fluid);
