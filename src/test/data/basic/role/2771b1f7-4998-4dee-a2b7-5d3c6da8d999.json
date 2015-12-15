@@ -53,6 +53,10 @@
             },
             {
                 "permission": "delete",
+                "resourceName": "claim"
+            },
+            {
+                "permission": "delete",
                 "resourceName": "concept"
             },
             {

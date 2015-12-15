@@ -75,7 +75,7 @@ var sidebarTester = function ($) {
     //test not rendering procedures
     var noProceduresSidebarTest = cspace.tests.testEnvironment({
         testCase: bareSidebarTest,
-        permissions: getLimitedPermissions(["intake", "loanin", "loanout", "conditioncheck", "valuationcontrol", "acquisition", "movement", "objectexit", "restrictedmedia", "media"]),
+        permissions: getLimitedPermissions(["intake", "loanin", "loanout", "conditioncheck", "valuationcontrol", "acquisition", "movement", "objectexit", "restrictedmedia", "media", "claim"]),
         components: {
             pageBuilder: {
                 type: "cspace.pageBuilder"

@@ -1,0 +1,759 @@
+{
+    "recordEditor": {
+        ".csc-claim-objectsPhotographedNote-label": {
+            "messagekey": "claim-objectsPhotographedNoteLabel"
+        },
+        ".csc-claim-altClaimName-label": {
+            "messagekey": "claim-altClaimNameLabel"
+        },
+        ".csc-claim-objectsMarkedDeaccessioned": "${fields.objectsMarkedDeaccessioned}",
+        ".csc-claim-objectsLocatedCountedNote": "${fields.objectsLocatedCountedNote}",
+        ".csc-claim-dispositionPossibilitiesDiscussed": "${fields.dispositionPossibilitiesDiscussed}",
+        ".csc-claim-recommendationNAGPRACommitteeDate-label": {
+            "messagekey": "claim-recommendationNAGPRACommitteeDateLabel"
+        },
+        ".csc-claim-claimNumber": "${fields.claimNumber}",
+        ".csc-claim-claimNumber-container": {
+            "decorators": [{
+                "func": "cspace.numberPatternChooser",
+                "type": "fluid",
+                "options": {
+                    "model": {
+                        "names": ["Claim"],
+                        "list": ["claim"],
+                        "samples": ["CL2015.1"]
+                    },
+                    "selectors": {
+                        "numberField": ".csc-claim-claimNumber"
+                    }
+                }
+            }]
+        },
+        ".csc-claim-dateArrangedPickupTransfer": "${fields.dateArrangedPickupTransfer}",
+        ".csc-claim-responseNationalNAGPRANote-label": {
+            "messagekey": "claim-responseNationalNAGPRANoteLabel"
+        },
+        ".csc-claim-altClaimNote-label": {
+            "messagekey": "claim-altClaimNoteLabel"
+        },
+        ".csc-claim-objectsConsolidated": "${fields.objectsConsolidated}",
+        ".csc-claim-transferDatesGroup": {
+            "decorators": [{
+                "func": "cspace.makeRepeatable",
+                "type": "fluid",
+                "options": {
+                    "repeatTree": {
+                        "expander": {
+                            "tree": {
+                                ".csc-claim-transferNote": "${{row}.transferNote}",
+                                ".csc-claim-transferDate": {
+                                    "decorators": [{
+                                        "func": "cspace.datePicker",
+                                        "type": "fluid"
+                                    }],
+                                    "value": "${{row}.transferDate}"
+                                }
+                            },
+                            "type": "fluid.noexpand"
+                        }
+                    },
+                    "elPath": "fields.transferDatesGroup"
+                }
+            }]
+        },
+        ".csc-claim-claimContextInformation-label": {
+            "messagekey": "claim-claimContextInformationLabel"
+        },
+        ".csc-claim-transferDatesGroup-label": {
+            "messagekey": "claim-transferDatesGroupLabel"
+        },
+        ".csc-claim-dispositionPossibilitiesDiscussed-label": {
+            "messagekey": "claim-dispositionPossibilitiesDiscussedLabel"
+        },
+        ".csc-claim-institutionalNAGPRATeamNotified": "${fields.institutionalNAGPRATeamNotified}",
+        ".csc-claim-dateArrangedPickupTransfer-label": {
+            "messagekey": "claim-dateArrangedPickupTransferLabel"
+        },
+        ".csc-claim-accessionFileResearchCompleted": "${fields.accessionFileResearchCompleted}",
+        ".csc-claim-dispositionPossibilitiesDiscussedNote-label": {
+            "messagekey": "claim-dispositionPossibilitiesDiscussedNoteLabel"
+        },
+        ".csc-claim-culturalGroupsInvolvedGroup": {
+            "decorators": [{
+                "func": "cspace.makeRepeatable",
+                "type": "fluid",
+                "options": {
+                    "repeatTree": {
+                        "expander": {
+                            "tree": {
+                                ".csc-claim-culturalGroupNote": "${{row}.culturalGroupNote}",
+                                ".csc-claim-culturalGroupName": "${{row}.culturalGroupName}"
+                            },
+                            "type": "fluid.noexpand"
+                        }
+                    },
+                    "elPath": "fields.culturalGroupsInvolvedGroup"
+                }
+            }]
+        },
+        ".csc-claim-updatedAt": {
+            "decorators": [{
+                "func": "cspace.datePicker",
+                "type": "fluid"
+            }],
+            "value": "${fields.updatedAt}"
+        },
+        ".csc-claim-siteFileResearchCompletedNote": "${fields.siteFileResearchCompletedNote}",
+        ".csc-claim-siteFileResearchCompletedNote-label": {
+            "messagekey": "claim-siteFileResearchCompletedNoteLabel"
+        },
+        ".csc-claim-registrationDocumentsDrawnUpNote-label": {
+            "messagekey": "claim-registrationDocumentsDrawnUpNoteLabel"
+        },
+        ".csc-claim-objectsLocatedCounted": "${fields.objectsLocatedCounted}",
+        ".csc-claim-publicationsNationalNAGPRAGroup": {
+            "decorators": [{
+                "func": "cspace.makeRepeatable",
+                "type": "fluid",
+                "options": {
+                    "repeatTree": {
+                        "expander": {
+                            "tree": {
+                                ".csc-claim-publicationNationalNAGPRANote": "${{row}.publicationNationalNAGPRANote}",
+                                ".csc-claim-publicationNationalNAGPRADate": {
+                                    "decorators": [{
+                                        "func": "cspace.datePicker",
+                                        "type": "fluid"
+                                    }],
+                                    "value": "${{row}.publicationNationalNAGPRADate}"
+                                }
+                            },
+                            "type": "fluid.noexpand"
+                        }
+                    },
+                    "elPath": "fields.publicationsNationalNAGPRAGroup"
+                }
+            }]
+        },
+        ".csc-claim-claimsProcessingInformation-label": {
+            "messagekey": "claim-claimsProcessingInformationLabel"
+        },
+        ".csc-claim-nationalNAGPRA30DayNoticeDate-label": {
+            "messagekey": "claim-nationalNAGPRA30DayNoticeDateLabel"
+        },
+        ".csc-claim-objectsMarkedDeaccessionedNote": "${fields.objectsMarkedDeaccessionedNote}",
+        ".csc-claim-claimFiledDatesGroup-label": {
+            "messagekey": "claim-claimFiledDatesGroupLabel"
+        },
+        ".csc-claim-dateArrangedPickupTransferNote": "${fields.dateArrangedPickupTransferNote}",
+        ".csc-claim-timePeriodsRepresentedGroup": {
+            "decorators": [{
+                "func": "cspace.makeRepeatable",
+                "type": "fluid",
+                "options": {
+                    "repeatTree": {
+                        "expander": {
+                            "tree": {
+                                ".csc-claim-periodOrDateNote": "${{row}.periodOrDateNote}",
+                                ".csc-timePeriodsRepresentedGroup-periodOrDateGroup": {
+                                    "decorators": [{
+                                        "func": "cspace.structuredDate",
+                                        "type": "fluid",
+                                        "options": {
+                                            "root": "{row}",
+                                            "elPath": "periodOrDateGroup.dateDisplayDate",
+                                            "elPaths": {
+                                                "dateEarliestSingleQualifier": "periodOrDateGroup.dateEarliestSingleQualifier",
+                                                "scalarValuesComputed": "periodOrDateGroup.scalarValuesComputed",
+                                                "dateLatestDay": "periodOrDateGroup.dateLatestDay",
+                                                "dateLatestYear": "periodOrDateGroup.dateLatestYear",
+                                                "dateAssociation": "periodOrDateGroup.dateAssociation",
+                                                "dateEarliestSingleEra": "periodOrDateGroup.dateEarliestSingleEra",
+                                                "dateDisplayDate": "periodOrDateGroup.dateDisplayDate",
+                                                "dateEarliestSingleCertainty": "periodOrDateGroup.dateEarliestSingleCertainty",
+                                                "dateLatestEra": "periodOrDateGroup.dateLatestEra",
+                                                "dateEarliestSingleQualifierValue": "periodOrDateGroup.dateEarliestSingleQualifierValue",
+                                                "dateLatestCertainty": "periodOrDateGroup.dateLatestCertainty",
+                                                "dateEarliestSingleYear": "periodOrDateGroup.dateEarliestSingleYear",
+                                                "dateLatestQualifier": "periodOrDateGroup.dateLatestQualifier",
+                                                "dateLatestQualifierValue": "periodOrDateGroup.dateLatestQualifierValue",
+                                                "dateEarliestSingleQualifierUnit": "periodOrDateGroup.dateEarliestSingleQualifierUnit",
+                                                "datePeriod": "periodOrDateGroup.datePeriod",
+                                                "dateEarliestScalarValue": "periodOrDateGroup.dateEarliestScalarValue",
+                                                "dateLatestMonth": "periodOrDateGroup.dateLatestMonth",
+                                                "dateNote": "periodOrDateGroup.dateNote",
+                                                "dateLatestScalarValue": "periodOrDateGroup.dateLatestScalarValue",
+                                                "dateLatestQualifierUnit": "periodOrDateGroup.dateLatestQualifierUnit",
+                                                "dateEarliestSingleDay": "periodOrDateGroup.dateEarliestSingleDay",
+                                                "dateEarliestSingleMonth": "periodOrDateGroup.dateEarliestSingleMonth"
+                                            }
+                                        }
+                                    }],
+                                    "value": "${{row}.periodOrDateGroup.dateDisplayDate}"
+                                }
+                            },
+                            "type": "fluid.noexpand"
+                        }
+                    },
+                    "elPath": "fields.timePeriodsRepresentedGroup"
+                }
+            }]
+        },
+        ".csc-claim-accessionFileResearchCompletedNote-label": {
+            "messagekey": "claim-accessionFileResearchCompletedNoteLabel"
+        },
+        ".csc-claim-filedOnBehalfOf-label": {
+            "messagekey": "claim-filedOnBehalfOfLabel"
+        },
+        ".csc-claim-initialResponseDate-label": {
+            "messagekey": "claim-initialResponseDateLabel"
+        },
+        ".csc-claim-claimDocumentsArchivesNote": "${fields.claimDocumentsArchivesNote}",
+        ".csc-claim-initialResponseDatesGroup-label": {
+            "messagekey": "claim-initialResponseDatesGroupLabel"
+        },
+        ".csc-claim-coreInformation-label": {
+            "messagekey": "claim-coreInformationLabel"
+        },
+        ".csc-claim-transferNote-label": {
+            "messagekey": "claim-transferNoteLabel"
+        },
+        ".csc-claim-culturalGroupsInvolvedGroup-label": {
+            "messagekey": "claim-culturalGroupsInvolvedGroupLabel"
+        },
+        ".csc-claim-objectsPhotographed": "${fields.objectsPhotographed}",
+        ".csc-claim-objectsLocatedCountedNote-label": {
+            "messagekey": "claim-objectsLocatedCountedNoteLabel"
+        },
+        ".csc-claim-tribeContactedForPackingStorageInstructionsNote-label": {
+            "messagekey": "claim-tribeContactedForPackingStorageInstructionsNoteLabel"
+        },
+        ".csc-claim-tribeContactedForPackingStorageInstructionsNote": "${fields.tribeContactedForPackingStorageInstructionsNote}",
+        ".csc-claim-claimNumber-label": {
+            "messagekey": "claim-claimNumberLabel"
+        },
+        ".csc-claim-claimName-label": {
+            "messagekey": "claim-claimNameLabel"
+        },
+        ".csc-claim-updatedBy": "${fields.updatedBy}",
+        ".csc-claim-claimantNote-label": {
+            "messagekey": "claim-claimantNoteLabel"
+        },
+        ".csc-claim-dateArrangedPickupTransferNote-label": {
+            "messagekey": "claim-dateArrangedPickupTransferNoteLabel"
+        },
+        ".csc-claim-objectsLocatedCounted-label": {
+            "messagekey": "claim-objectsLocatedCountedLabel"
+        },
+        ".csc-claim-accessionFileResearchCompleted-label": {
+            "messagekey": "claim-accessionFileResearchCompletedLabel"
+        },
+        ".csc-claim-claimDocumentsArchivesNote-label": {
+            "messagekey": "claim-claimDocumentsArchivesNoteLabel"
+        },
+        ".csc-claim-claimNote": {
+            "decorators": [{
+                "func": "cspace.makeRepeatable",
+                "type": "fluid",
+                "options": {
+                    "repeatTree": {
+                        "expander": {
+                            "tree": {
+                                ".csc-claim-claimNote": "${{row}.claimNote}"
+                            },
+                            "type": "fluid.noexpand"
+                        }
+                    },
+                    "elPath": "fields.claimNotes"
+                }
+            }]
+        },
+        ".csc-claim-responsesNationalNAGPRAGroup": {
+            "decorators": [{
+                "func": "cspace.makeRepeatable",
+                "type": "fluid",
+                "options": {
+                    "repeatTree": {
+                        "expander": {
+                            "tree": {
+                                ".csc-claim-responseNationalNAGPRANote": "${{row}.responseNationalNAGPRANote}",
+                                ".csc-claim-responseNationalNAGPRADate": {
+                                    "decorators": [{
+                                        "func": "cspace.datePicker",
+                                        "type": "fluid"
+                                    }],
+                                    "value": "${{row}.responseNationalNAGPRADate}"
+                                }
+                            },
+                            "type": "fluid.noexpand"
+                        }
+                    },
+                    "elPath": "fields.responsesNationalNAGPRAGroup"
+                }
+            }]
+        },
+        ".csc-claim-claimTypes-label": {
+            "messagekey": "claim-claimTypesLabel"
+        },
+        ".csc-claim-refName-label": {
+            "messagekey": "claim-refNameLabel"
+        },
+        ".csc-claim-culturalGroupName-label": {
+            "messagekey": "claim-culturalGroupNameLabel"
+        },
+        ".csc-claim-nationalNAGPRA30DayNoticesGroup": {
+            "decorators": [{
+                "func": "cspace.makeRepeatable",
+                "type": "fluid",
+                "options": {
+                    "repeatTree": {
+                        "expander": {
+                            "tree": {
+                                ".csc-claim-nationalNAGPRA30DayNoticeType": {
+                                    "default": "",
+                                    "optionnames": ["Please select a value", "period begins", "period ends"],
+                                    "optionlist": ["", "period-begins", "period-ends"],
+                                    "selection": "${{row}.nationalNAGPRA30DayNoticeType}"
+                                },
+                                ".csc-claim-nationalNAGPRA30DayNoticeDate": {
+                                    "decorators": [{
+                                        "func": "cspace.datePicker",
+                                        "type": "fluid"
+                                    }],
+                                    "value": "${{row}.nationalNAGPRA30DayNoticeDate}"
+                                },
+                                ".csc-claim-nationalNAGPRA30DayNoticeNote": "${{row}.nationalNAGPRA30DayNoticeNote}"
+                            },
+                            "type": "fluid.noexpand"
+                        }
+                    },
+                    "elPath": "fields.nationalNAGPRA30DayNoticesGroup"
+                }
+            }]
+        },
+        ".csc-timePeriodsRepresentedGroup-periodOrDateGroup-label": {
+            "messagekey": "timePeriodsRepresentedGroup-periodOrDateGroupLabel"
+        },
+        ".csc-claim-tenantId": "${fields.tenantId}",
+        ".csc-claim-siteFileResearchCompleted": "${fields.siteFileResearchCompleted}",
+        ".csc-claim-claimClaimantGroup": {
+            "decorators": [{
+                "func": "cspace.makeRepeatable",
+                "type": "fluid",
+                "options": {
+                    "repeatTree": {
+                        "expander": {
+                            "tree": {
+                                ".csc-claim-filedOnBehalfOf": {
+                                    "decorators": [{
+                                        "func": "cspace.autocomplete",
+                                        "type": "fluid",
+                                        "options": {
+                                            "queryUrl": "../../../tenant/core/claim/autocomplete/filedOnBehalfOf",
+                                            "vocabUrl": "../../../tenant/core/claim/source-vocab/filedOnBehalfOf"
+                                        }
+                                    }],
+                                    "value": "${{row}.filedOnBehalfOf}"
+                                },
+                                ".csc-claim-filedBy": {
+                                    "decorators": [{
+                                        "func": "cspace.autocomplete",
+                                        "type": "fluid",
+                                        "options": {
+                                            "queryUrl": "../../../tenant/core/claim/autocomplete/filedBy",
+                                            "vocabUrl": "../../../tenant/core/claim/source-vocab/filedBy"
+                                        }
+                                    }],
+                                    "value": "${{row}.filedBy}"
+                                },
+                                ".csc-claim-claimantNote": "${{row}.claimantNote}"
+                            },
+                            "type": "fluid.noexpand"
+                        }
+                    },
+                    "elPath": "fields.claimClaimantGroup"
+                }
+            }]
+        },
+        ".csc-claim-uri": "${fields.uri}",
+        ".csc-claim-publicationNationalNAGPRANote-label": {
+            "messagekey": "claim-publicationNationalNAGPRANoteLabel"
+        },
+        ".csc-claim-sentNationalNAGPRADate-label": {
+            "messagekey": "claim-sentNationalNAGPRADateLabel"
+        },
+        ".csc-claim-refName": "${fields.refName}",
+        ".csc-claim-altClaimNamesGroup": {
+            "decorators": [{
+                "func": "cspace.makeRepeatable",
+                "type": "fluid",
+                "options": {
+                    "repeatTree": {
+                        "expander": {
+                            "tree": {
+                                ".csc-claim-altClaimName": "${{row}.altClaimName}",
+                                ".csc-claim-altClaimNote": "${{row}.altClaimNote}"
+                            },
+                            "type": "fluid.noexpand"
+                        }
+                    },
+                    "elPath": "fields.altClaimNamesGroup"
+                }
+            }]
+        },
+        ".csc-claim-createdAt-label": {
+            "messagekey": "claim-createdAtLabel"
+        },
+        ".csc-claim-objectsMarkedDeaccessioned-label": {
+            "messagekey": "claim-objectsMarkedDeaccessionedLabel"
+        },
+        ".csc-claim-siteOrPlaceName-label": {
+            "messagekey": "claim-siteOrPlaceNameLabel"
+        },
+        ".csc-claim-sitesInvolvedGroup-label": {
+            "messagekey": "claim-sitesInvolvedGroupLabel"
+        },
+        ".csc-claim-claimNote-label": {
+            "messagekey": "claim-claimNoteLabel"
+        },
+        ".csc-claim-transferDate-label": {
+            "messagekey": "claim-transferDateLabel"
+        },
+        ".csc-claim-nationalNAGPRA30DayNoticesGroup-label": {
+            "messagekey": "claim-nationalNAGPRA30DayNoticesGroupLabel"
+        },
+        ".csc-claim-claimDocumentsArchives-label": {
+            "messagekey": "claim-claimDocumentsArchivesLabel"
+        },
+        ".csc-claim-claimType": {
+            "decorators": [{
+                "func": "cspace.makeRepeatable",
+                "type": "fluid",
+                "options": {
+                    "repeatTree": {
+                        "expander": {
+                            "tree": {
+                                ".csc-claim-claimType": {
+                                    "decorators": [{
+                                        "func": "cspace.termList",
+                                        "type": "fluid",
+                                        "options": {
+                                            "root": "{row}",
+                                            "elPath": "claimType",
+                                            "termListType": "claimType"
+                                        }
+                                    }]
+                                }
+                            },
+                            "type": "fluid.noexpand"
+                        }
+                    },
+                    "elPath": "fields.claimTypes"
+                }
+            }]
+        },
+        ".csc-claim-siteOrPlaceNote-label": {
+            "messagekey": "claim-siteOrPlaceNoteLabel"
+        },
+        ".csc-claim-updatedAt-label": {
+            "messagekey": "claim-updatedAtLabel"
+        },
+        ".csc-claim-nationalNAGPRA30DayNoticeType-label": {
+            "messagekey": "claim-nationalNAGPRA30DayNoticeTypeLabel"
+        },
+        ".csc-claim-sentNAGPRACommitteeDatesGroup-label": {
+            "messagekey": "claim-sentNAGPRACommitteeDatesGroupLabel"
+        },
+        ".csc-claim-recommendationsNAGPRACommitteeGroup": {
+            "decorators": [{
+                "func": "cspace.makeRepeatable",
+                "type": "fluid",
+                "options": {
+                    "repeatTree": {
+                        "expander": {
+                            "tree": {
+                                ".csc-claim-recommendationNAGPRACommitteeDate": {
+                                    "decorators": [{
+                                        "func": "cspace.datePicker",
+                                        "type": "fluid"
+                                    }],
+                                    "value": "${{row}.recommendationNAGPRACommitteeDate}"
+                                },
+                                ".csc-claim-recommendationNAGPRACommitteeNote": "${{row}.recommendationNAGPRACommitteeNote}"
+                            },
+                            "type": "fluid.noexpand"
+                        }
+                    },
+                    "elPath": "fields.recommendationsNAGPRACommitteeGroup"
+                }
+            }]
+        },
+        ".csc-claim-createdBy-label": {
+            "messagekey": "claim-createdByLabel"
+        },
+        ".csc-claim-claimFiledNote-label": {
+            "messagekey": "claim-claimFiledNoteLabel"
+        },
+        ".csc-claim-publicationsNationalNAGPRAGroup-label": {
+            "messagekey": "claim-publicationsNationalNAGPRAGroupLabel"
+        },
+        ".csc-claim-claimFiledDatesGroup": {
+            "decorators": [{
+                "func": "cspace.makeRepeatable",
+                "type": "fluid",
+                "options": {
+                    "repeatTree": {
+                        "expander": {
+                            "tree": {
+                                ".csc-claim-claimFiledDate": {
+                                    "decorators": [{
+                                        "func": "cspace.datePicker",
+                                        "type": "fluid"
+                                    }],
+                                    "value": "${{row}.claimFiledDate}"
+                                },
+                                ".csc-claim-claimFiledNote": "${{row}.claimFiledNote}"
+                            },
+                            "type": "fluid.noexpand"
+                        }
+                    },
+                    "elPath": "fields.claimFiledDatesGroup"
+                }
+            }]
+        },
+        ".csc-claim-responsesNationalNAGPRAGroup-label": {
+            "messagekey": "claim-responsesNationalNAGPRAGroupLabel"
+        },
+        ".csc-claim-objectsPhotographed-label": {
+            "messagekey": "claim-objectsPhotographedLabel"
+        },
+        ".csc-claim-claimFiledDate-label": {
+            "messagekey": "claim-claimFiledDateLabel"
+        },
+        ".csc-claim-createdBy": "${fields.createdBy}",
+        ".csc-claim-tribeContactedForPackingStorageInstructions": "${fields.tribeContactedForPackingStorageInstructions}",
+        ".csc-claim-claimInformation-label": {
+            "messagekey": "claim-claimInformationLabel"
+        },
+        ".csc-claim-responseNationalNAGPRADate-label": {
+            "messagekey": "claim-responseNationalNAGPRADateLabel"
+        },
+        ".csc-claim-siteFileResearchCompleted-label": {
+            "messagekey": "claim-siteFileResearchCompletedLabel"
+        },
+        ".csc-claim-objectsConsolidatedNote": "${fields.objectsConsolidatedNote}",
+        ".csc-claim-claimName": "${fields.claimName}",
+        ".csc-claim-claimClaimantGroup-label": {
+            "messagekey": "claim-claimClaimantGroupLabel"
+        },
+        ".csc-claim-surroundingTribesContacted-label": {
+            "messagekey": "claim-surroundingTribesContactedLabel"
+        },
+        ".csc-claim-objectsMarkedDeaccessionedNote-label": {
+            "messagekey": "claim-objectsMarkedDeaccessionedNoteLabel"
+        },
+        ".csc-claim-sentNAGPRACommitteeNote-label": {
+            "messagekey": "claim-sentNAGPRACommitteeNoteLabel"
+        },
+        ".csc-claim-sentNAGPRACommitteeDatesGroup": {
+            "decorators": [{
+                "func": "cspace.makeRepeatable",
+                "type": "fluid",
+                "options": {
+                    "repeatTree": {
+                        "expander": {
+                            "tree": {
+                                ".csc-claim-sentNAGPRACommitteeDate": {
+                                    "decorators": [{
+                                        "func": "cspace.datePicker",
+                                        "type": "fluid"
+                                    }],
+                                    "value": "${{row}.sentNAGPRACommitteeDate}"
+                                },
+                                ".csc-claim-sentNAGPRACommitteeNote": "${{row}.sentNAGPRACommitteeNote}"
+                            },
+                            "type": "fluid.noexpand"
+                        }
+                    },
+                    "elPath": "fields.sentNAGPRACommitteeDatesGroup"
+                }
+            }]
+        },
+        ".csc-claim-filedBy-label": {
+            "messagekey": "claim-filedByLabel"
+        },
+        ".csc-claim-claimDocumentsArchives": "${fields.claimDocumentsArchives}",
+        ".csc-claim-surroundingTribesContactedNote": "${fields.surroundingTribesContactedNote}",
+        ".csc-claim-dispositionPossibilitiesDiscussedNote": "${fields.dispositionPossibilitiesDiscussedNote}",
+        ".csc-claim-altClaimNamesGroup-label": {
+            "messagekey": "claim-altClaimNamesGroupLabel"
+        },
+        ".csc-claim-institutionalNAGPRATeamNotified-label": {
+            "messagekey": "claim-institutionalNAGPRATeamNotifiedLabel"
+        },
+        ".csc-claim-tenantId-label": {
+            "messagekey": "claim-tenantIdLabel"
+        },
+        ".csc-claim-domaindata-label": {
+            "messagekey": "claim-domaindataLabel"
+        },
+        ".csc-claim-sitesInvolvedGroup": {
+            "decorators": [{
+                "func": "cspace.makeRepeatable",
+                "type": "fluid",
+                "options": {
+                    "repeatTree": {
+                        "expander": {
+                            "tree": {
+                                ".csc-claim-siteOrPlaceName": {
+                                    "decorators": [{
+                                        "func": "cspace.autocomplete",
+                                        "type": "fluid",
+                                        "options": {
+                                            "queryUrl": "../../../tenant/core/claim/autocomplete/siteOrPlaceName",
+                                            "vocabUrl": "../../../tenant/core/claim/source-vocab/siteOrPlaceName"
+                                        }
+                                    }],
+                                    "value": "${{row}.siteOrPlaceName}"
+                                },
+                                ".csc-claim-siteOrPlaceNote": "${{row}.siteOrPlaceNote}"
+                            },
+                            "type": "fluid.noexpand"
+                        }
+                    },
+                    "elPath": "fields.sitesInvolvedGroup"
+                }
+            }]
+        },
+        ".csc-claim-registrationDocumentsDrawnUp": "${fields.registrationDocumentsDrawnUp}",
+        ".csc-claim-institutionalNAGPRATeamNotifiedNote-label": {
+            "messagekey": "claim-institutionalNAGPRATeamNotifiedNoteLabel"
+        },
+        ".csc-claim-nationalNAGPRA30DayNoticeNote-label": {
+            "messagekey": "claim-nationalNAGPRA30DayNoticeNoteLabel"
+        },
+        ".csc-claim-sentNationalNAGPRANote-label": {
+            "messagekey": "claim-sentNationalNAGPRANoteLabel"
+        },
+        ".csc-claim-objectsConsolidatedNote-label": {
+            "messagekey": "claim-objectsConsolidatedNoteLabel"
+        },
+        ".csc-claim-surroundingTribesContacted": "${fields.surroundingTribesContacted}",
+        ".csc-claim-recommendationsNAGPRACommitteeGroup-label": {
+            "messagekey": "claim-recommendationsNAGPRACommitteeGroupLabel"
+        },
+        ".csc-claim-objectsConsolidated-label": {
+            "messagekey": "claim-objectsConsolidatedLabel"
+        },
+        ".csc-claim-sentNAGPRACommitteeDate-label": {
+            "messagekey": "claim-sentNAGPRACommitteeDateLabel"
+        },
+        ".csc-claim-objectsPhotographedNote": "${fields.objectsPhotographedNote}",
+        ".csc-claim-registrationDocumentsDrawnUpNote": "${fields.registrationDocumentsDrawnUpNote}",
+        ".csc-claim-claimType-label": {
+            "messagekey": "claim-claimTypeLabel"
+        },
+        ".csc-claim-periodOrDateNote-label": {
+            "messagekey": "claim-periodOrDateNoteLabel"
+        },
+        ".csc-claim-recommendationNAGPRACommitteeNote-label": {
+            "messagekey": "claim-recommendationNAGPRACommitteeNoteLabel"
+        },
+        ".csc-claim-sentNationalNAGPRADatesGroup-label": {
+            "messagekey": "claim-sentNationalNAGPRADatesGroupLabel"
+        },
+        ".csc-claim-accessionFileResearchCompletedNote": "${fields.accessionFileResearchCompletedNote}",
+        ".csc-claim-initialResponseDatesGroup": {
+            "decorators": [{
+                "func": "cspace.makeRepeatable",
+                "type": "fluid",
+                "options": {
+                    "repeatTree": {
+                        "expander": {
+                            "tree": {
+                                ".csc-claim-initialResponseDate": {
+                                    "decorators": [{
+                                        "func": "cspace.datePicker",
+                                        "type": "fluid"
+                                    }],
+                                    "value": "${{row}.initialResponseDate}"
+                                },
+                                ".csc-claim-initialResponseDateNote": "${{row}.initialResponseDateNote}"
+                            },
+                            "type": "fluid.noexpand"
+                        }
+                    },
+                    "elPath": "fields.initialResponseDatesGroup"
+                }
+            }]
+        },
+        ".csc-claim-number-label": {
+            "messagekey": "claim-numberLabel"
+        },
+        ".csc-claim-claimNotes-label": {
+            "messagekey": "claim-claimNotesLabel"
+        },
+        ".csc-claim-initialResponseDateNote-label": {
+            "messagekey": "claim-initialResponseDateNoteLabel"
+        },
+        ".csc-claim-surroundingTribesContactedNote-label": {
+            "messagekey": "claim-surroundingTribesContactedNoteLabel"
+        },
+        ".csc-claim-updatedBy-label": {
+            "messagekey": "claim-updatedByLabel"
+        },
+        ".csc-claim-sentNationalNAGPRADatesGroup": {
+            "decorators": [{
+                "func": "cspace.makeRepeatable",
+                "type": "fluid",
+                "options": {
+                    "repeatTree": {
+                        "expander": {
+                            "tree": {
+                                ".csc-claim-sentNationalNAGPRANote": "${{row}.sentNationalNAGPRANote}",
+                                ".csc-claim-sentNationalNAGPRADate": {
+                                    "decorators": [{
+                                        "func": "cspace.datePicker",
+                                        "type": "fluid"
+                                    }],
+                                    "value": "${{row}.sentNationalNAGPRADate}"
+                                }
+                            },
+                            "type": "fluid.noexpand"
+                        }
+                    },
+                    "elPath": "fields.sentNationalNAGPRADatesGroup"
+                }
+            }]
+        },
+        ".csc-claim-publicationNationalNAGPRADate-label": {
+            "messagekey": "claim-publicationNationalNAGPRADateLabel"
+        },
+        ".csc-claim-timePeriodsRepresentedGroup-label": {
+            "messagekey": "claim-timePeriodsRepresentedGroupLabel"
+        },
+        ".csc-claim-uri-label": {
+            "messagekey": "claim-uriLabel"
+        },
+        ".csc-claim-createdAt": {
+            "decorators": [{
+                "func": "cspace.datePicker",
+                "type": "fluid"
+            }],
+            "value": "${fields.createdAt}"
+        },
+        ".csc-claim-culturalGroupNote-label": {
+            "messagekey": "claim-culturalGroupNoteLabel"
+        },
+        ".csc-claim-summary-label": {
+            "messagekey": "claim-summaryLabel"
+        },
+        ".csc-claim-institutionalNAGPRATeamNotifiedNote": "${fields.institutionalNAGPRATeamNotifiedNote}",
+        ".csc-claim-registrationDocumentsDrawnUp-label": {
+            "messagekey": "claim-registrationDocumentsDrawnUpLabel"
+        },
+        ".csc-claim-tribeContactedForPackingStorageInstructions-label": {
+            "messagekey": "claim-tribeContactedForPackingStorageInstructionsLabel"
+        }
+    }
+}

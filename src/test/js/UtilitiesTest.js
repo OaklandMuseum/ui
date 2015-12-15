@@ -311,7 +311,8 @@ var utilitiesTester = function ($) {
         "objectexit": ["create", "read", "update", "delete", "list"],
         "media": ["create", "read", "update", "delete", "list"],
         "objects": ["create", "read", "update", "delete", "list"],
-        "valuationcontrol": ["create", "read", "update", "delete", "list"]
+        "valuationcontrol": ["create", "read", "update", "delete", "list"],
+        "claim": ["create", "read", "update", "delete", "list"]
     };
     
     utilitiesTest.test("Full model from schema with getBeanValue", function () {        
@@ -508,7 +509,8 @@ var utilitiesTester = function ($) {
                 "objectexit",
                 "restrictedmedia",
                 "media",
-                "valuationcontrol"
+                "valuationcontrol",
+                "claim"
             ],
             "cataloging": ["cataloging"],
             "procedures": [
@@ -521,7 +523,8 @@ var utilitiesTester = function ($) {
                 "objectexit",
                 "restrictedmedia",
                 "media",
-                "valuationcontrol"
+                "valuationcontrol",
+                "claim"
             ],
             "vocabularies": [
                 "person",
@@ -549,7 +552,8 @@ var utilitiesTester = function ($) {
                 "objectexit",
                 "restrictedmedia",
                 "media",
-                "valuationcontrol"
+                "valuationcontrol",
+                "claim"
             ],
             "cataloging": ["cataloging"],
             "procedures": [
@@ -562,7 +566,8 @@ var utilitiesTester = function ($) {
                 "objectexit",
                 "restrictedmedia",
                 "media",
-                "valuationcontrol"
+                "valuationcontrol",
+                "claim"
             ],
             "vocabularies": [
                 "person",
@@ -591,11 +596,13 @@ var utilitiesTester = function ($) {
                 "objectexit",
                 "restrictedmedia",
                 "media",
-                "valuationcontrol"
+                "valuationcontrol",
+                "claim"
             ],
             "cataloging": ["cataloging"],
             "procedures": [
                 "acquisition",
+                "claim",
                 "conditioncheck",
                 "intake",
                 "loanin",

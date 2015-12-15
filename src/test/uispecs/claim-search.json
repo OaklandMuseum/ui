@@ -1,0 +1,138 @@
+{
+    ".csc-claim-updatedAtStart": {
+        "decorators": [{
+            "func": "cspace.datePicker",
+            "type": "fluid"
+        }],
+        "value": "${updatedAtStart}"
+    },
+    ".csc-claim-claimClaimantGroup": {
+        "decorators": [{
+            "func": "cspace.makeRepeatable",
+            "type": "fluid",
+            "options": {
+                "repeatTree": {
+                    "expander": {
+                        "tree": {
+                            ".csc-claim-filedOnBehalfOf": {
+                                "decorators": [{
+                                    "func": "cspace.autocomplete",
+                                    "type": "fluid",
+                                    "options": {
+                                        "queryUrl": "../../../tenant/core/claim/autocomplete/filedOnBehalfOf",
+                                        "vocabUrl": "../../../tenant/core/claim/source-vocab/filedOnBehalfOf"
+                                    }
+                                }],
+                                "value": "${{row}.filedOnBehalfOf}"
+                            },
+                            ".csc-claim-filedBy": {
+                                "decorators": [{
+                                    "func": "cspace.autocomplete",
+                                    "type": "fluid",
+                                    "options": {
+                                        "queryUrl": "../../../tenant/core/claim/autocomplete/filedBy",
+                                        "vocabUrl": "../../../tenant/core/claim/source-vocab/filedBy"
+                                    }
+                                }],
+                                "value": "${{row}.filedBy}"
+                            }
+                        },
+                        "type": "fluid.noexpand"
+                    }
+                },
+                "elPath": "claimClaimantGroup",
+                "hidePrimary": true
+            }
+        }]
+    },
+    ".csc-claim-updatedBy-label": {
+        "messagekey": "claim-updatedByLabel"
+    },
+    ".csc-claim-claimFiledDateStart": {
+        "decorators": [{
+            "func": "cspace.datePicker",
+            "type": "fluid"
+        }],
+        "value": "${claimFiledDateStart}"
+    },
+    ".csc-claim-updatedAtEnd": {
+        "decorators": [{
+            "func": "cspace.datePicker",
+            "type": "fluid"
+        }],
+        "value": "${updatedAtEnd}"
+    },
+    ".csc-claim-claimNumber-label": {
+        "messagekey": "claim-claimNumberLabel"
+    },
+    ".csc-claim-claimNumber": {
+        "decorators": [{
+            "func": "cspace.makeRepeatable",
+            "type": "fluid",
+            "options": {
+                "repeatTree": {
+                    "expander": {
+                        "tree": {
+                            ".csc-claim-claimNumber": "${{row}.claimNumber}"
+                        },
+                        "type": "fluid.noexpand"
+                    }
+                },
+                "elPath": "claimNumbers",
+                "hidePrimary": true
+            }
+        }]
+    },
+    ".csc-claim-filedBy-label": {
+        "messagekey": "claim-filedByLabel"
+    },
+    ".csc-claim-updatedBy": {
+        "decorators": [{
+            "func": "cspace.makeRepeatable",
+            "type": "fluid",
+            "options": {
+                "repeatTree": {
+                    "expander": {
+                        "tree": {
+                            ".csc-claim-updatedBy": "${{row}.updatedBy}"
+                        },
+                        "type": "fluid.noexpand"
+                    }
+                },
+                "elPath": "updatedBys",
+                "hidePrimary": true
+            }
+        }]
+    },
+    ".csc-claim-claimFiledDate-label": {
+        "messagekey": "claim-claimFiledDateLabel"
+    },
+    ".csc-claim-claimFiledDateEnd": {
+        "decorators": [{
+            "func": "cspace.datePicker",
+            "type": "fluid"
+        }],
+        "value": "${claimFiledDateEnd}"
+    },
+    ".csc-claim-claimantNote-label": {
+        "messagekey": "claim-claimantNoteLabel"
+    },
+    ".csc-claim-claimFiledDateStart-label": {
+        "messagekey": "claim-claimFiledDateStartLabel"
+    },
+    ".csc-claim-updatedAt-label": {
+        "messagekey": "claim-updatedAtLabel"
+    },
+    ".csc-claim-updatedAtEnd-label": {
+        "messagekey": "claim-updatedAtEndLabel"
+    },
+    ".csc-claim-filedOnBehalfOf-label": {
+        "messagekey": "claim-filedOnBehalfOfLabel"
+    },
+    ".csc-claim-claimFiledDateEnd-label": {
+        "messagekey": "claim-claimFiledDateEndLabel"
+    },
+    ".csc-claim-updatedAtStart-label": {
+        "messagekey": "claim-updatedAtStartLabel"
+    }
+}
