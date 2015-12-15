@@ -22,7 +22,7 @@
                             "queryPath": "fields.claimClaimantGroup",
                             "childPath": "_primary",
                             "value": true,
-                            "path": "filedOnBehalfOf"
+                            "path": "filedBy"
                         }]
                     }
                 },
