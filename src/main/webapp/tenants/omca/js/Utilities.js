@@ -2175,11 +2175,18 @@ fluid.registerNamespace("cspace.util");
     // Used in computed summary fields
     cspace.util.mergeFields = function() {
         var mergedFields = "";
-        var myFields = Array.prototype.slice.call(arguments);
+        var myFields = [];
+        var j = 0;
 
         for (var i = 0; i < arguments.length; i++) {
-            if(isURN(arguments[i])) {
-                myFields[i] = cspace.util.urnToString(arguments[i]);
+            // Copy over fields that aren't empty
+            if(arguments[i] && arguments[i].length){
+                // Convert URNs into strings
+                if(isURN(arguments[i])) {
+                    myFields[j++] = cspace.util.urnToString(arguments[i]);
+                } else {
+                    myFields[j++] = arguments[i];
+                }
             }
         }
         
