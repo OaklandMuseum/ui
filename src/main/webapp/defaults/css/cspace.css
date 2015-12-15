@@ -2587,3 +2587,13 @@ li.cs-repeatable-repeat .stretched .cs-termList {
 .stretched input.cs-autocomplete-input, .stretched ul.cs-repeatable li.cs-repeatable-repeat input.cs-autocomplete-input, .stretched ul.cs-repeatable li.cs-repeatable-repeat input.cs-repeatable-content, .stretched ul.cs-repeatable li.cs-repeatable-repeat textarea.cs-repeatable-content {
     width: 94%
 }
+table#csc-claim-tasks tbody td:nth-child(1) {
+    width:30%;
+    padding-left:6px;
+}
+table#csc-claim-tasks tbody td:nth-child(2) {
+    width:21px;
+}
+table#csc-claim-tasks tbody td:nth-child(2) input {
+    margin:6px;
+}

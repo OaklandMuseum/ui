@@ -48,7 +48,8 @@ var searchBoxTester = function ($) {
         "authorization/permissions/permroles": ["create", "read", "update", "delete", "list"],
         "vocab": ["create", "read", "update", "delete", "list"],
         "notes": ["create", "read", "update", "delete", "list"],
-        "valuationcontrol": ["create", "read", "update", "delete", "list"]
+        "valuationcontrol": ["create", "read", "update", "delete", "list"],
+        "claim": ["create", "read", "update", "delete", "list"]
     };
     
     var bareSearchBoxTest = new jqUnit.TestCase("SearchBox Tests");
@@ -65,8 +66,8 @@ var searchBoxTester = function ($) {
     searchBoxTest.test("Init and render", function () {
         var searchBox = setupSearchBox({related: "all"});
         searchBox.refreshView();
-        // 9 expected for 10 members of "all" category minus person which has no read permission
-        jqUnit.assertEquals("SearchBox dropdown\'s number of recordTypes is equal to", 9, $("option", searchBox.locate("recordTypeSelect")).length);
+        // 10 expected for 11 members of "all" category minus person which has no read permission
+        jqUnit.assertEquals("SearchBox dropdown\'s number of recordTypes is equal to", 10, $("option", searchBox.locate("recordTypeSelect")).length);
         jqUnit.assertEquals("Label is ", "", searchBox.locate("recordTypeSelectLabel").text());
     });
     

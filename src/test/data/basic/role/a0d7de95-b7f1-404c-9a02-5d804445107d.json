@@ -49,6 +49,10 @@
             },
             {
                 "permission": "read",
+                "resourceName": "claim"
+            },
+            {
+                "permission": "read",
                 "resourceName": "concept"
             },
             {

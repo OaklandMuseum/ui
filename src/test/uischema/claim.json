@@ -1,0 +1,515 @@
+{
+    "claim": {
+        "properties": {
+            "relations": {
+                "default": {},
+                "type": "object"
+            },
+            "termsUsed": {
+                "default": [],
+                "type": "array"
+            },
+            "csid": {
+                "type": "string"
+            },
+            "fields": {
+                "properties": {
+                    "tenantId": {
+                        "type": "string"
+                    },
+                    "recommendationsNAGPRACommitteeGroup": {
+                        "items": {
+                            "properties": {
+                                "_primary": {
+                                    "default": true,
+                                    "type": "boolean"
+                                },
+                                "recommendationNAGPRACommitteeNote": {
+                                    "type": "string"
+                                },
+                                "recommendationNAGPRACommitteeDate": {
+                                    "type": "date"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "type": "array"
+                    },
+                    "dateArrangedPickupTransfer": {
+                        "default": false,
+                        "type": "boolean"
+                    },
+                    "dateArrangedPickupTransferNote": {
+                        "type": "string"
+                    },
+                    "registrationDocumentsDrawnUpNote": {
+                        "type": "string"
+                    },
+                    "objectsMarkedDeaccessioned": {
+                        "default": false,
+                        "type": "boolean"
+                    },
+                    "claimTypes": {
+                        "items": {
+                            "properties": {
+                                "_primary": {
+                                    "default": true,
+                                    "type": "boolean"
+                                },
+                                "claimType": {
+                                    "default": "",
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "type": "array"
+                    },
+                    "objectsConsolidatedNote": {
+                        "type": "string"
+                    },
+                    "transferDatesGroup": {
+                        "items": {
+                            "properties": {
+                                "_primary": {
+                                    "default": true,
+                                    "type": "boolean"
+                                },
+                                "transferDate": {
+                                    "type": "date"
+                                },
+                                "transferNote": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "type": "array"
+                    },
+                    "institutionalNAGPRATeamNotifiedNote": {
+                        "type": "string"
+                    },
+                    "surroundingTribesContactedNote": {
+                        "type": "string"
+                    },
+                    "claimName": {
+                        "type": "string"
+                    },
+                    "claimNotes": {
+                        "items": {
+                            "properties": {
+                                "_primary": {
+                                    "default": true,
+                                    "type": "boolean"
+                                },
+                                "claimNote": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "type": "array"
+                    },
+                    "updatedBy": {
+                        "type": "string"
+                    },
+                    "objectsLocatedCountedNote": {
+                        "type": "string"
+                    },
+                    "initialResponseDatesGroup": {
+                        "items": {
+                            "properties": {
+                                "_primary": {
+                                    "default": true,
+                                    "type": "boolean"
+                                },
+                                "initialResponseDate": {
+                                    "type": "date"
+                                },
+                                "initialResponseDateNote": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "type": "array"
+                    },
+                    "createdAt": {
+                        "type": "date"
+                    },
+                    "nationalNAGPRA30DayNoticesGroup": {
+                        "items": {
+                            "properties": {
+                                "_primary": {
+                                    "default": true,
+                                    "type": "boolean"
+                                },
+                                "nationalNAGPRA30DayNoticeNote": {
+                                    "type": "string"
+                                },
+                                "nationalNAGPRA30DayNoticeType": {
+                                    "default": "",
+                                    "type": "string"
+                                },
+                                "nationalNAGPRA30DayNoticeDate": {
+                                    "type": "date"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "type": "array"
+                    },
+                    "objectsMarkedDeaccessionedNote": {
+                        "type": "string"
+                    },
+                    "siteFileResearchCompleted": {
+                        "default": false,
+                        "type": "boolean"
+                    },
+                    "responsesNationalNAGPRAGroup": {
+                        "items": {
+                            "properties": {
+                                "_primary": {
+                                    "default": true,
+                                    "type": "boolean"
+                                },
+                                "responseNationalNAGPRADate": {
+                                    "type": "date"
+                                },
+                                "responseNationalNAGPRANote": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "type": "array"
+                    },
+                    "sitesInvolvedGroup": {
+                        "items": {
+                            "properties": {
+                                "_primary": {
+                                    "default": true,
+                                    "type": "boolean"
+                                },
+                                "siteOrPlaceName": {
+                                    "type": "string"
+                                },
+                                "siteOrPlaceNote": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "type": "array"
+                    },
+                    "surroundingTribesContacted": {
+                        "default": false,
+                        "type": "boolean"
+                    },
+                    "publicationsNationalNAGPRAGroup": {
+                        "items": {
+                            "properties": {
+                                "_primary": {
+                                    "default": true,
+                                    "type": "boolean"
+                                },
+                                "publicationNationalNAGPRADate": {
+                                    "type": "date"
+                                },
+                                "publicationNationalNAGPRANote": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "type": "array"
+                    },
+                    "claimFiledDatesGroup": {
+                        "items": {
+                            "properties": {
+                                "claimFiledNote": {
+                                    "type": "string"
+                                },
+                                "_primary": {
+                                    "default": true,
+                                    "type": "boolean"
+                                },
+                                "claimFiledDate": {
+                                    "type": "date"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "type": "array"
+                    },
+                    "accessionFileResearchCompleted": {
+                        "default": false,
+                        "type": "boolean"
+                    },
+                    "sentNationalNAGPRADatesGroup": {
+                        "items": {
+                            "properties": {
+                                "_primary": {
+                                    "default": true,
+                                    "type": "boolean"
+                                },
+                                "sentNationalNAGPRANote": {
+                                    "type": "string"
+                                },
+                                "sentNationalNAGPRADate": {
+                                    "type": "date"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "type": "array"
+                    },
+                    "dispositionPossibilitiesDiscussedNote": {
+                        "type": "string"
+                    },
+                    "registrationDocumentsDrawnUp": {
+                        "default": false,
+                        "type": "boolean"
+                    },
+                    "objectsLocatedCounted": {
+                        "default": false,
+                        "type": "boolean"
+                    },
+                    "timePeriodsRepresentedGroup": {
+                        "items": {
+                            "properties": {
+                                "_primary": {
+                                    "default": true,
+                                    "type": "boolean"
+                                },
+                                "periodOrDateGroup": {
+                                    "properties": {
+                                        "dateEarliestSingleQualifier": {
+                                            "default": "",
+                                            "type": "string"
+                                        },
+                                        "scalarValuesComputed": {
+                                            "default": "true",
+                                            "type": "string"
+                                        },
+                                        "dateLatestDay": {
+                                            "type": "integer"
+                                        },
+                                        "dateLatestYear": {
+                                            "type": "integer"
+                                        },
+                                        "dateAssociation": {
+                                            "type": "string"
+                                        },
+                                        "dateEarliestSingleEra": {
+                                            "default": "",
+                                            "type": "string"
+                                        },
+                                        "dateDisplayDate": {
+                                            "type": "string"
+                                        },
+                                        "dateEarliestSingleCertainty": {
+                                            "default": "",
+                                            "type": "string"
+                                        },
+                                        "dateLatestEra": {
+                                            "default": "",
+                                            "type": "string"
+                                        },
+                                        "dateEarliestSingleQualifierValue": {
+                                            "type": "integer"
+                                        },
+                                        "dateLatestCertainty": {
+                                            "default": "",
+                                            "type": "string"
+                                        },
+                                        "dateEarliestSingleYear": {
+                                            "type": "integer"
+                                        },
+                                        "dateLatestQualifier": {
+                                            "default": "",
+                                            "type": "string"
+                                        },
+                                        "dateLatestQualifierValue": {
+                                            "type": "integer"
+                                        },
+                                        "dateEarliestSingleQualifierUnit": {
+                                            "default": "",
+                                            "type": "string"
+                                        },
+                                        "datePeriod": {
+                                            "type": "string"
+                                        },
+                                        "dateEarliestScalarValue": {
+                                            "type": "date"
+                                        },
+                                        "_primary": {
+                                            "default": true,
+                                            "type": "boolean"
+                                        },
+                                        "dateLatestMonth": {
+                                            "type": "integer"
+                                        },
+                                        "dateNote": {
+                                            "type": "string"
+                                        },
+                                        "dateLatestScalarValue": {
+                                            "type": "date"
+                                        },
+                                        "dateLatestQualifierUnit": {
+                                            "default": "",
+                                            "type": "string"
+                                        },
+                                        "dateEarliestSingleDay": {
+                                            "type": "integer"
+                                        },
+                                        "dateEarliestSingleMonth": {
+                                            "type": "integer"
+                                        }
+                                    },
+                                    "type": "object"
+                                },
+                                "periodOrDateNote": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "type": "array"
+                    },
+                    "tribeContactedForPackingStorageInstructionsNote": {
+                        "type": "string"
+                    },
+                    "claimDocumentsArchives": {
+                        "default": false,
+                        "type": "boolean"
+                    },
+                    "uri": {
+                        "type": "string"
+                    },
+                    "objectsConsolidated": {
+                        "default": false,
+                        "type": "boolean"
+                    },
+                    "objectsPhotographedNote": {
+                        "type": "string"
+                    },
+                    "tribeContactedForPackingStorageInstructions": {
+                        "default": false,
+                        "type": "boolean"
+                    },
+                    "updatedAt": {
+                        "type": "date"
+                    },
+                    "accessionFileResearchCompletedNote": {
+                        "type": "string"
+                    },
+                    "createdBy": {
+                        "type": "string"
+                    },
+                    "altClaimNamesGroup": {
+                        "items": {
+                            "properties": {
+                                "_primary": {
+                                    "default": true,
+                                    "type": "boolean"
+                                },
+                                "altClaimName": {
+                                    "type": "string"
+                                },
+                                "altClaimNote": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "type": "array"
+                    },
+                    "claimDocumentsArchivesNote": {
+                        "type": "string"
+                    },
+                    "refName": {
+                        "type": "string"
+                    },
+                    "claimClaimantGroup": {
+                        "items": {
+                            "properties": {
+                                "_primary": {
+                                    "default": true,
+                                    "type": "boolean"
+                                },
+                                "filedBy": {
+                                    "type": "string"
+                                },
+                                "claimantNote": {
+                                    "type": "string"
+                                },
+                                "filedOnBehalfOf": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "type": "array"
+                    },
+                    "institutionalNAGPRATeamNotified": {
+                        "default": false,
+                        "type": "boolean"
+                    },
+                    "objectsPhotographed": {
+                        "default": false,
+                        "type": "boolean"
+                    },
+                    "dispositionPossibilitiesDiscussed": {
+                        "default": false,
+                        "type": "boolean"
+                    },
+                    "culturalGroupsInvolvedGroup": {
+                        "items": {
+                            "properties": {
+                                "_primary": {
+                                    "default": true,
+                                    "type": "boolean"
+                                },
+                                "culturalGroupNote": {
+                                    "type": "string"
+                                },
+                                "culturalGroupName": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "type": "array"
+                    },
+                    "claimNumber": {
+                        "type": "string"
+                    },
+                    "sentNAGPRACommitteeDatesGroup": {
+                        "items": {
+                            "properties": {
+                                "sentNAGPRACommitteeNote": {
+                                    "type": "string"
+                                },
+                                "_primary": {
+                                    "default": true,
+                                    "type": "boolean"
+                                },
+                                "sentNAGPRACommitteeDate": {
+                                    "type": "date"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "type": "array"
+                    },
+                    "siteFileResearchCompletedNote": {
+                        "type": "string"
+                    }
+                },
+                "type": "object"
+            }
+        },
+        "type": "object"
+    }
+}

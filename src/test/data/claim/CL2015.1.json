@@ -1,0 +1,36 @@
+{
+    "csid": "222-333-4444-5555",
+    "fields": {
+        "claimNumber": "CL2015.1",
+        "claimName": "foo claim",
+        "altClaimNamesGroup": [
+            {
+                "_primary": true,
+                "altClaimName": "alt name",
+                "altClaimNote": "alt note"
+            }
+        ],
+        "claimClaimantGroup": [
+            {
+                "_primary": true,
+                "de-urned-filedOnBehalfOf": "John Doe",
+                "de-urned-filedBy": "Connie Curator",
+                "filedOnBehalfOf": "urn:cspace:core.collectionspace.org:personauthorities:name(person):item:name(JohnDoe1429860133232)'John Doe'",
+                "filedBy": "urn:cspace:core.collectionspace.org:personauthorities:name(person):item:name(ConnieCurator1429860191889)'Connie Curator'",
+                "claimantNote": "This is the claimant note"
+            }
+        ],
+    },
+    "relations": {
+        "cataloging": [
+            {
+                "summary": "Souvenir books. Molly O' Play Book.",
+                "csid": "2005.018.1383",
+                "number": "2005.018.1383",
+                "relid": "e8d20612-e1f5-4e90-bc36",
+                "relationshiptype": "affects",
+                "recordtype": "cataloging"
+            }
+        ]
+    }
+}

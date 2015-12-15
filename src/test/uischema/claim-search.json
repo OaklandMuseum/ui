@@ -1,0 +1,67 @@
+{
+    "claim": {
+        "properties": {
+            "claimFiledDateEnd": {
+                "type": "date"
+            },
+            "claimClaimantGroup": {
+                "items": {
+                    "properties": {
+                        "_primary": {
+                            "default": true,
+                            "type": "boolean"
+                        },
+                        "filedBy": {
+                            "type": "string"
+                        },
+                        "filedOnBehalfOf": {
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                },
+                "type": "array"
+            },
+            "claimFiledDateStart": {
+                "type": "date"
+            },
+            "updatedAtEnd": {
+                "type": "date"
+            },
+            "claimNumbers": {
+                "items": {
+                    "properties": {
+                        "_primary": {
+                            "default": true,
+                            "type": "boolean"
+                        },
+                        "claimNumber": {
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                },
+                "type": "array"
+            },
+            "updatedBys": {
+                "items": {
+                    "properties": {
+                        "_primary": {
+                            "default": true,
+                            "type": "boolean"
+                        },
+                        "updatedBy": {
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                },
+                "type": "array"
+            },
+            "updatedAtStart": {
+                "type": "date"
+            }
+        },
+        "type": "object"
+    }
+}

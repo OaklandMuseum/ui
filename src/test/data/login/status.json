@@ -292,6 +292,13 @@
             "update",
             "delete",
             "list"
+        ],
+        "claim": [
+            "create",
+            "read",
+            "update",
+            "delete",
+            "list"
         ]
     },
     "login": true,

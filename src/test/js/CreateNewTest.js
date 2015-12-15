@@ -59,6 +59,7 @@ var createNewTester = function ($) {
     lessPermissions.conditioncheck = [];
     lessPermissions.intake = ["create", "read", "update", "delete", "list"];
     lessPermissions.valuationcontrol = [];
+    lessPermissions.claim = [];
     
     var createNewTestLessPerms = cspace.tests.testEnvironment({
         testCase: bareCreateNewTest,
@@ -84,6 +85,8 @@ var createNewTester = function ($) {
             jqUnit.assertTrue("Condition Check ("+str+") not shown", $('label:contains("'+str+'")').length < 1);
             str = createNewPage.options.parentBundle.messageBase.valuationcontrol;
             jqUnit.assertTrue("Valuation Control ("+str+") not shown", $('label:contains("'+str+'")').length < 1);
+            str = createNewPage.options.parentBundle.messageBase.claim;
+            jqUnit.assertTrue("Claim ("+str+") not shown", $('label:contains("'+str+'")').length < 1);
             //styling:
             assertStyling(createNewPage, createNewPage.options.styles.totalOf3);
             start();
@@ -100,6 +103,7 @@ var createNewTester = function ($) {
     lessCategories.work = [];
     lessCategories.concept = [];
     lessCategories.valuationcontrol = [];
+    lessCategories.claim = [];
     
     var createNewTestOneCategories = cspace.tests.testEnvironment({
         testCase: bareCreateNewTest,

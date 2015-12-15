@@ -99,6 +99,14 @@
             "recordtype": "permission"
         },
         {
+            "summary": "claim",
+            "display": "show",
+            "csid": "2caf103f-d2bb-4b19-bd88-4e47fe65262f",
+            "number": "CRUDL",
+            "recordtype": "permission"
+        },
+        {
+        {
             "summary": "movement",
             "display": "show",
             "csid": "5722a921-1e93-4522-8c45-a372147e9007",
