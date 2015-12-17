@@ -36,6 +36,12 @@ login-submitNewPassword: Reset
 errorCalculating: %labelError calculating field value: %status
 invalidCalculatedNumber: The calculated value is not a valid number.
 
+claim: NAGPRA
+claim-number: NAGPRA Number
+claim-editRecord: Edit NAGPRA Record
+claim-recordList: Related NAGPRA Records
+claim-tab: NAGPRA
+
 movement-editRecord: Edit Location/Inventory Record
 movement-recordList: Related Location/Inventory Records
 movement: Location/Inventory
@@ -354,6 +360,7 @@ restrictedmedia-approveForPublicLabel: Approve for public
 restrictedmedia-sortableIdentificationNumberLabel: Sortable Identification Number
 
 #Claim
+claim-claimsProcessingInformationLabel: Claims Processing Information
 claim-claimNumberLabel: Reference number
 claim-sortableClaimNumberLabel: Sortable Reference number
 claim-sitesInvolvedGroupLabel: Inventory/Summary Involved
@@ -373,49 +380,29 @@ claim-dateFulfilledLabel: Date fulfilled
 claim-notesOnRequestLabel: Notes on requests
 claim-noteOnRequestLabel: Note on requests
 claim-claimNumberOMCALabel: Claim number
-
 claim-deaccessionResearchCompleteGroupLabel: Date deaccession research complete
 claim-deaccessionResearchCompleteDateLabel: Date
 claim-deaccessionResearchCompleteNoteLabel: Note
-
 claim-sentCollectionsCommitteeGroupLabel: Date send to Collections Committee
 claim-sentCollectionsCommitteeDateLabel: Date
 claim-sentCollectionsCommitteeNoteLabel: Note
-
 claim-recommendationCollectionsCommitteeGroupLabel: Recommendation of Collections Committee
 claim-recommendationCollectionsCommitteeDateLabel: Date
 claim-recommendationCollectionsCommitteeRecommendationLabel: Recommendations
-
 claim-sentExecutiveTeamGroupLabel: Date sent to Executive Team/ED
 claim-sentExecutiveTeamDateLabel: Date
 claim-sentExecutiveTeamNoteLabel: Note
-
 claim-recommendationExecutiveTeamGroupLabel: Recommendation of Executive Team/ED
 claim-recommendationExecutiveTeamDateLabel: Date
 claim-recommendationExecutiveTeamRecommendationLabel: Recommendations
-
 claim-sentOMCABoardGroupLabel: Sent to OMCA Board
 claim-sentOMCABoardDateLabel: Date
 claim-sentOMCABoardNoteLabel: Note
-
 claim-recommendationOMCABoardGroupLabel: Recommendation of OMCA Board
 claim-recommendationOMCABoardDateLabel: Date
 claim-recommendationOMCABoardRecommendationLabel: Recommendations
-
 claim-claimantNotifiedClaimStatusGroupLabel: Date claimant notified of claim status
 claim-claimantNotifiedClaimStatusDateLabel: Date
 claim-claimantNotifiedClaimStatusNoteLabel: Note
-
 claim-claimProcessNotesLabel: Notes on claim process
 claim-claimProcessNoteLabel: Note on claim process
-
-
-
-
-
-
-
-
-
-
-
