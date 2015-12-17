@@ -495,6 +495,13 @@ cspace = cspace || {};
         that.applier.requestChange("searchModel.renderRequest", true);
         that.events.modelChanged.fire();
     };
+
+    cspace.replaceRecordTypeString = function (elem,match,replace) {
+        if (elem.html() === match){
+            console.log("replace '" + match + "' with '" + replace + "'");
+            $(elem).html(replace);
+        }
+    }
     
     cspace.search.searchView.displaySearchResults = function (that) {
         var range = that.model.pagination.totalItems; // TODO: dependency on external model
@@ -511,6 +518,16 @@ cspace = cspace || {};
         
         that.locate("resultsContainer").show();
         that.events.afterSearch.fire(that.model.searchModel);
+
+        // HACK replace all instances of 'claim' with 'NAGPRA' in main search results
+        $("body#search .csc-search-results table#search-results tbody tr").each(function(){
+            cspace.replaceRecordTypeString($(this).find("td:nth-child(3)"),"claim","NAGPRA");
+        });
+
+        // HACK replace all instances of 'claim' with 'NAGPRA' in dialog boxes
+        $(".ui-dialog .csc-search-results table#search-results tbody tr").each(function(){
+            cspace.replaceRecordTypeString($(this).find("td:nth-child(4)"),"claim","NAGPRA");
+        });
     };
     
     cspace.search.searchView.updateModel = function (applier, newModel) {
