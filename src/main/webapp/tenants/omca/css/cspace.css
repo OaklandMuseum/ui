@@ -2475,6 +2475,10 @@ li.cs-repeatable-repeat .cs-termList {
 li.cs-repeatable-repeat .cs-singleElementGroup .cs-termList {
     width: 100%;
 }
+li.cs-repeatable-repeat .content.cs-singleElementGroup table,
+li.cs-repeatable-repeat .content.cs-singleElementGroup select  {
+    width:100%;
+}
 table li.cs-repeatable-repeat .cs-termList,
 li.cs-repeatable-repeat table .cs-termList {
     width: 100%;
