@@ -2633,3 +2633,7 @@ table#csc-claim-tasks tbody td:nth-child(2) {
 table#csc-claim-tasks tbody td:nth-child(2) input {
     margin:6px;
 }
+.content.noborder li {
+    padding:0;
+    border:0;
+}
