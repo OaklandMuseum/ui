@@ -57,7 +57,7 @@ cspace = cspace || {};
         produceTree: "cspace.recordHistory.produceTree",
         mergePolicy: {
             recordApplier: "nomerge"
-        },
+        }
     });
 
     cspace.recordHistory.produceTree = function(that) {

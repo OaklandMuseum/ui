@@ -25,7 +25,7 @@ cspace = cspace || {};
             mediumImage: ".csc-mediaView-mediumImage",
             previousLink: ".csc-mediaView-previous-link",
             nextLink: ".csc-mediaView-next-link",
-            mediumImageLink: ".csc-mediaView-mediumImage-link",
+            mediumImageLink: ".csc-mediaView-mediumImage-link"
         },
         produceTree: "cspace.mediaView.produceTree",
         styles: {
@@ -116,7 +116,7 @@ cspace = cspace || {};
                         }, {
                             type: "attrs",
                             attributes: {
-                                label: that.options.parentBundle.resolve("sidebar-mediumImage"),
+                                label: that.options.parentBundle.resolve("sidebar-mediumImage")
                             }
                         }]
                     },

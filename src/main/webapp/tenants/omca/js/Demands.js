@@ -1993,7 +1993,7 @@ https://source.collectionspace.org/collection-space/LICENSE.txt
             events: {
                 removeAllListeners: "{advancedSearch}.events.recordTypeChanged",
                 onSubmit: "{searchView}.events.onAdvancedSearch"
-            },
+            }
         }, "{arguments}.1"]
     });
     
