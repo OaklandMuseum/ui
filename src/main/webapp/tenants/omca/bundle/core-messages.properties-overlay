@@ -383,7 +383,7 @@ claim-claimNumberOMCALabel: Claim number
 claim-deaccessionResearchCompleteGroupLabel: Date deaccession research complete
 claim-deaccessionResearchCompleteDateLabel: Date
 claim-deaccessionResearchCompleteNoteLabel: Note
-claim-sentCollectionsCommitteeGroupLabel: Date send to Collections Committee
+claim-sentCollectionsCommitteeGroupLabel: Date sent to Collections Committee
 claim-sentCollectionsCommitteeDateLabel: Date
 claim-sentCollectionsCommitteeNoteLabel: Note
 claim-recommendationCollectionsCommitteeGroupLabel: Recommendation of Collections Committee
