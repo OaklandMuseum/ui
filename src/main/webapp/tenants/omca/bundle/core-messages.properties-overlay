@@ -360,6 +360,7 @@ restrictedmedia-approveForPublicLabel: Approve for public
 restrictedmedia-sortableIdentificationNumberLabel: Sortable Identification Number
 
 #Claim
+claim-claimInformationLabel: NAGPRA Claims and Information Requests
 claim-claimsProcessingInformationLabel: Claims Processing Information
 claim-claimNumberLabel: Reference number
 claim-sortableClaimNumberLabel: Sortable Reference number
