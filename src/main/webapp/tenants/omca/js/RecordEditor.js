@@ -2052,7 +2052,7 @@ cspace = cspace || {};
             },
             urls: cspace.componentUrlBuilder({
                 recordURL: "%tenant/%tname/%recordType/%csid",
-                permissionsUrl: "%tenant/%tname/permission/search?actGrp=CRUDL"
+                permissionsUrl: "%tenant/%tname/permission/search?actGrp=CRUDL&pageSize=0"
             }),
             components: {
                 sourcePermissions: {
@@ -2162,7 +2162,8 @@ cspace = cspace || {};
             var permissions = fluid.transform(fluid.copy(that.permissions), function (permission) {
                 return {
                     resourceName: permission.summary,
-                    display: permission.display,
+                    display: (permission.summary == "relations" ? "display" : permission.display), //HACK OMCA-5 to get relations permissions to display
+                    //display: "display",
                     permission: fluid.find(fluid.get(role, "fields.permissions"), function (rolePermission) {
                         if (permission.summary === rolePermission.resourceName) {
                             return rolePermission.permission;
