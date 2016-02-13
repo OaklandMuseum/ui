@@ -156,6 +156,7 @@ intake-depositorOMCALabel: Depositor
 intake-depositorsRequirementsOMCALabel: Depositor Requirements
 
 #Cataloging
+collection-object-objectNumberLabel: Object Number
 collection-object-textualInscriptionInformationLabel: Inscription
 collection-object-distinguishingFeaturesLabel: Curatorial Remarks
 collection-object-commentsLabel: Inhouse Notes
