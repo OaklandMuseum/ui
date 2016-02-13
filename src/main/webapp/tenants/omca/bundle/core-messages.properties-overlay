@@ -36,6 +36,8 @@ login-submitNewPassword: Reset
 errorCalculating: %labelError calculating field value: %status
 invalidCalculatedNumber: The calculated value is not a valid number.
 
+preferred:
+
 claim: NAGPRA
 claim-number: NAGPRA Number
 claim-editRecord: Edit NAGPRA Record

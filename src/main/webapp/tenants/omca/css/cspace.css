@@ -2486,7 +2486,7 @@ li.cs-repeatable-repeat table .cs-termList {
 div.label.cs-preferred-label {
     vertical-align: middle;
     display: inline-block;
-    padding-top: 6px;
+    padding-top: 0px;
 }
 
 .cs-relatedRecords-tab .cs-add-related-record-button {
