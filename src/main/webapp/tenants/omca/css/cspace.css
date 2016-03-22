@@ -391,6 +391,7 @@ li .flc-pager-pageLink {
     margin-top:30px;
     margin-bottom:10px;
     background: #fff url("../images/omca-logo.gif") no-repeat left top;
+    background-size: contain;
     width:301px; 
     height:94px;
 }
@@ -402,7 +403,8 @@ li .flc-pager-pageLink {
     margin-top:15px; 
     margin-bottom:10px;
     float:left; 
-    background: #fff url("../images/omca-logo.gif") no-repeat left top; 
+    background: #fff url("../images/omca-logo.gif") no-repeat left top;
+    background-size: contain; 
     width:301px; 
     height:94px;}
 .header-menu-logo a {
@@ -1175,6 +1177,16 @@ table.cs-admin-table td.checkbox {
     padding-top:10px; 
     width:100%;}
 
+login-webcast-links {
+    display: inline-table;
+}
+.login-webcast-links > li {
+    display: table-row;
+}
+.login-webcast-links > li > * {
+    display: table-cell;
+    padding-right: 1em;
+}
 .reset-password .login-pair .login-label {
     width:120px;}
 .reset-password .login-pair .login-element {
