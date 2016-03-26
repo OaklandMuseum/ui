@@ -292,6 +292,9 @@ loanout-loanoutInsuranceNoteLabel: Note
 #Object Exit
 objectexit-depositorLabel: Recipient
 objectexit-sortableExitNumberLabel: Sortable Exit Number
+objectexit-exitStatusGroupLabel: Exit Status
+objectexit-exitStatusLabel: Exit Status
+objectexit-exitStatusDateLabel: Exit Status Date
 
 #Movement
 movement-currentLocationFitnessLabel: Type
