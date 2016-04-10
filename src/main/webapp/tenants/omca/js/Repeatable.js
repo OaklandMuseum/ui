@@ -418,6 +418,12 @@ cspace = cspace || {};
                 $(inputs).removeClass("show").addClass("hidden");
             }
         }
+        // hide repeat button if parent .content div is tagged with "hide-add-button"
+        var parID = radioButtons.parents(".content");
+        if(parID.attr("id") === "hide-add-button") {
+            console.log("parent content: " + parID.attr("id"));
+            $(parID).find(".cs-repeatable-add").hide();
+        }
     };
     
     // Style delete depending on how many elements we have in the repeatable
