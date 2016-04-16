@@ -420,10 +420,12 @@ cspace = cspace || {};
         }
         // hide repeat button if parent .content div is tagged with "hide-add-button"
         var parID = radioButtons.parents(".content");
-        if(parID.attr("id") === "hide-add-button") {
-            console.log("parent content: " + parID.attr("id"));
-            $(parID).find(".cs-repeatable-add").hide();
-        }
+        $.each(parID, function(index,value){
+            if($(value).attr("id") === "hide-add-button") {
+                console.log("parent content: " + $(value).attr("id"));
+                $(value).find(".cs-repeatable-add").hide();
+            }
+        });
     };
     
     // Style delete depending on how many elements we have in the repeatable
