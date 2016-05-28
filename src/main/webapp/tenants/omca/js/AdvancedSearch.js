@@ -75,7 +75,7 @@ cspace = cspace || {};
             afterToggle: null
         },
         model: {
-            andOrList: ["or", "and"], 
+            andOrList: ["and", "or"], 
             andOrNames: {
                 expander: {
                     type: "fluid.deferredInvokeCall",
@@ -83,7 +83,7 @@ cspace = cspace || {};
                     args: "{globalBundle}.messageBase"
                 } 
             },
-            operation: "or",
+            operation: "and",
             keywords: ""
         },
         permission: "list",
@@ -386,7 +386,7 @@ cspace = cspace || {};
     fluid.fetchResources.primeCacheFromResources("cspace.advancedSearch");
     
     cspace.advancedSearch.buildAndOrNames = function (messageBase) {
-        return fluid.transform(["or", "and"], function (value) {
+        return fluid.transform(["and", "or"], function (value) {
             return messageBase["advancedSearch-" + value];
         });
     };
