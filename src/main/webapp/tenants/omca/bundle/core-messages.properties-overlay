@@ -212,6 +212,10 @@ collection-object-viewerContributionNoteLabel: Viewer's Contribution Note
 collection-object-sortableObjectNumberLabel: Sortable Identification Number
 collection-object-computedCatalogingSummaryLabel: Computed Cataloging Summary
 
+collection-object-objectNumberRangeSearchLabel: Object Number (Range)
+collection-object-objectNumberRangeSearchStartLabel: From
+collection-object-objectNumberRangeSearchEndLabel: To
+
 # ------------------------------------------------------------
 # Added to support the collectionobjects_anthropology domain schema extensions
 # ******************* Cataloging ******************* #
