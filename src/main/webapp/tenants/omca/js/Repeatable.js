@@ -399,7 +399,7 @@ cspace = cspace || {};
     // Function to hide radio button and/or delete button
     cspace.repeatableImpl.hideButtons = function (radioButtons, inputs, fetchModel) {
         // hide radio button
-        if (radioButtons.length) {
+        if (radioButtons.length == 1) {
             var parentTD = $(radioButtons).parent("td");
             if (parentTD && parentTD.length) {
                 $(radioButtons).parent("td").addClass("hidden");
@@ -422,7 +422,7 @@ cspace = cspace || {};
         var parID = radioButtons.parents(".content");
         $.each(parID, function(index,value){
             if($(value).attr("id") === "hide-add-button") {
-                console.log("parent content: " + $(value).attr("id"));
+                //console.log("parent content: " + $(value).attr("id"));
                 $(value).find(".cs-repeatable-add").hide();
             }
         });
