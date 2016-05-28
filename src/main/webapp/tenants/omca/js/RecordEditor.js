@@ -175,7 +175,7 @@ cspace = cspace || {};
 
             // OMCA Check validity of ID value
             checkIDValue: {
-                type: "cspace.util.checkIDValues",
+                type: "omca.checkIDValues",
                 options: {
                     selectors: {
                         currentIDValue: "{cspace.recordEditor}.options.selectors.currentIDValue",

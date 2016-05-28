@@ -25,6 +25,7 @@
     <js>/defaults/js/MessageBar.js</js>
     <js>/tenants/omca/js/Search.js</js>
     <js>/defaults/js/PageBuilder.js</js>
+    <js>/tenants/omca/js/omca.js</js>
   </group>
   
   <group name='myCollectionSpace'>
@@ -47,6 +48,7 @@
     <js>/tenants/omca/js/Search.js</js>
     <js>/defaults/js/MyCollectionSpace.js</js>
     <js>/defaults/js/PageBuilder.js</js>
+    <js>/tenants/omca/js/omca.js</js>
   </group>
 
   <group name='advancedsearch'>
@@ -86,6 +88,7 @@
     <js>/defaults/lib/datejs/src/parser.js</js>
     <js>/defaults/lib/goog/js/goog.ui.DatePicker.js</js>
     <js>/tenants/omca/js/DatePicker.js</js>
+    <js>/tenants/omca/js/omca.js</js>
     <js>/defaults/tools/uispecVerifier/js/uispecVerifier.js</js>
   </group>
   
@@ -107,6 +110,7 @@
     <js>/defaults/js/MessageBar.js</js>
     <js>/tenants/omca/js/Search.js</js>
     <js>/defaults/js/PageBuilder.js</js>
+    <js>/tenants/omca/js/omca.js</js>
   </group>
   
   <group name='index'>
@@ -124,6 +128,7 @@
     <js>/tenants/omca/js/Search.js</js>
     <js>/defaults/js/Footer.js</js>
     <js>/defaults/js/PageBuilder.js</js>
+    <js>/tenants/omca/js/omca.js</js>
   </group>
   
   <group name='administration'>
@@ -166,6 +171,7 @@
     <js>/defaults/lib/datejs/src/core.js</js>
     <js>/defaults/lib/datejs/src/parser.js</js>
     <js>/defaults/js/PageBuilder.js</js>
+    <js>/tenants/omca/js/omca.js</js>
   </group>
   
   <group name='record'>
@@ -228,6 +234,7 @@
     <js>/tenants/omca/js/DatePicker.js</js>
     <js>/defaults/js/RecordTraverser.js</js>
     <js>/tenants/omca/js/RecordHistory.js</js>
+    <js>/tenants/omca/js/omca.js</js>
     <js>/defaults/tools/uispecVerifier/js/uispecVerifier.js</js>
   </group>
   
@@ -274,5 +281,6 @@
     <js>/defaults/lib/datejs/src/parser.js</js>
     <js>/defaults/lib/goog/js/goog.ui.DatePicker.js</js>
     <js>/tenants/omca/js/DatePicker.js</js>
+    <js>/tenants/omca/js/omca.js</js>
   </group>
 </groups>

@@ -482,8 +482,8 @@ cspace = cspace || {};
         // The related records query returns "items" instead of "results", so check for both.
         var results = data.results || data.items;
 
-        // Get search results with formatted updatedAt date strings
-        var cleanResults = cspace.util.cleanSearchResultsDateDisplay(results);
+        // OMCA Get search results with formatted updatedAt date strings
+        var cleanResults = omca.cleanSearchResultsDateDisplay(results);
         
         fluid.each(cleanResults, function (row, index) {
             var fullIndex = offset + index;

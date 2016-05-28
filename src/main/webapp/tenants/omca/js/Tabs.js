@@ -113,8 +113,8 @@ cspace = cspace || {};
             }]
         };
 
-        // quick-and-dirty way to create a custom sorted list of Record names
-        var customRecordOrder = cspace.util.customTabOrder(records);
+        // OMCA quick-and-dirty way to create a custom sorted list of Record names
+        var customRecordOrder = omca.customTabOrder(records);
         fluid.each(customRecordOrder, function (record) {
             model.tabs.push({
                 "name": record,

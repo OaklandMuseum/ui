@@ -316,8 +316,8 @@ cspace = cspace || {};
                 that.applier.requestChange(fluid.model.composeSegments("list"), list);
             }
             
-            // Get search results with formatted updatedAt date strings
-            var cleanDatesList = cspace.util.cleanSearchResultsDateDisplay(list);
+            // OMCA Get search results with formatted updatedAt date strings
+            var cleanDatesList = omca.cleanSearchResultsDateDisplay(list);
 
             fluid.each(cleanDatesList, function (row, index) {
                 var fullIndex = offset + index;
