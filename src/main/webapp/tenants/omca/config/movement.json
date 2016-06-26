@@ -18,7 +18,7 @@
                         "fields": [
                             "fields.movementReferenceNumber",
                             "fields.currentLocation",
-                            "fields.currentLocationFitness"
+                            "fields.reasonForMove"
                         ]
                     }
                 },
