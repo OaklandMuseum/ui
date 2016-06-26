@@ -233,46 +233,76 @@ var omca = {};
     /* Borrowed from Ray Lee's work on BAMPFA-207  */
     omca.computeDimensionSummary = function(measuredPart, dimensionSubGroup, measuredPartNote) {
         var valueMap = {};
+        var unitMap = {};
+
+        var measurementUnitAbbr = {
+            "inches": "in", 
+            "meters": "m", 
+            "centimeters": "cm", 
+            "cubic centimeters": "cm3", 
+            "feet": "ft", 
+            "kilograms": "kg", 
+            "liters": "l", 
+            "millimeters": "mm", 
+            "minutes": "mins", 
+            "ounces": "oz",
+            "pixels": "px", 
+            "pixels per inch": "ppi", 
+            "pounds": "lbs", 
+            "square feet": "ft2", 
+            "stories": "stories",
+            "troy ounces": "oz t", 
+            "yards": "yd"
+        }
         
         for (var i=0; i<dimensionSubGroup.length; i++) {
             var measurement = dimensionSubGroup[i];
             var dimension = measurement.dimension;
             var value = measurement.value;
-            var unit = measurement.measurementUnit;
+            var unit = cspace.util.urnToString(measurement.measurementUnit);
             
-            //if (unit == "inches" && value != null && value != "" && !(dimension in valueMap)) {
             if (value != null && value != "" && !(dimension in valueMap)) {
                 valueMap[dimension] = value;
+
+                if (measurementUnitAbbr.hasOwnProperty(unit)){
+                    unitMap[dimension] = " " + measurementUnitAbbr[unit];
+                } else if (unit.length < 1) {
+                    // default to "inches" if there is no unit set
+                    unitMap[dimension] = " " + measurementUnitAbbr["inches"];
+                } else {
+                    unitMap[dimension] = " " + unit;
+                }
+                //console.log("unit: " + unit + "; unit abbr: " + unitMap[dimension]);
             }
         }
-        
-        var orderedDimensions = ["height", "width", "depth", "diameter"];
+
+        var orderedDimensions = {"height": "H: ", "width": "W: ", "depth": "D: ", "diameter": "Dia: "};
         var orderedValues = [];
-        
-        for (var i=0; i<orderedDimensions.length; i++) {
-            var dimension = orderedDimensions[i];
-            
-            if (dimension in valueMap) {
-                orderedValues.push(valueMap[dimension]);
+
+        for (dimension in orderedDimensions){
+            if(orderedDimensions.hasOwnProperty(dimension) && (dimension in valueMap)) {
+                var dimensionDisplay = orderedDimensions[dimension] + valueMap[dimension] + unitMap[dimension];
+                orderedValues.push(dimensionDisplay);
             }
         }
         
-        var dimensionSummary = orderedValues.join(" x ");
+        var dimensionSummary = orderedValues.join(", ");
         var summaryParts = [];
         
-        if (measuredPart != null && measuredPart != "") {
+        /*if (measuredPart != null && measuredPart != "") {
             summaryParts.push(cspace.util.urnToString(measuredPart) + ":");
-        }
+        }*/
 
         if (dimensionSummary != "") {
             summaryParts.push(dimensionSummary);
         }
         
-        if (measuredPartNote != null && measuredPartNote != "") {
+        /*if (measuredPartNote != null && measuredPartNote != "") {
             summaryParts.push("(" + measuredPartNote + ")");
-        }
+        }*/
         
-        return summaryParts.join(" ");
+        //return summaryParts.join(" ");
+        return summaryParts;
     }
 
 })(jQuery, fluid);
