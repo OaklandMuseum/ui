@@ -253,6 +253,12 @@ cspace = cspace || {};
             // Show search fields once they are rendered.
             afterSearchFieldsInit: function () {
                 that.locate("searchFields").show();
+
+                // OMCA-51 convert tagged input fields into all caps
+                $(".toUpper").blur(function(){
+                    var foo = $(this).val();
+                    $(this).val(foo.toUpperCase()).change();
+                });
             },
             // Hide search attributes to display search results.
             onSearch: function (searchModel) {
