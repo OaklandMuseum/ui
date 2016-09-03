@@ -301,8 +301,7 @@ var omca = {};
             summaryParts.push("(" + measuredPartNote + ")");
         }*/
         
-        //return summaryParts.join(" ");
-        return summaryParts;
+        return summaryParts.join(" ");
     }
 
 })(jQuery, fluid);
