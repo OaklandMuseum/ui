@@ -73,6 +73,7 @@ person-personsSpecialtiesLabel: Person's Specialties
 person-personsSpecialtyLabel: Person's Specialty
 person-legacyParentsLabel: Legacy Parents
 person-legacySeeAlsoLabel: Legacy See Also
+person-groupsLabel: Identity
 
 #Organization
 organization-dissolutionDateGroupLabel: Active Dates
@@ -215,6 +216,7 @@ collection-object-computedCatalogingSummaryLabel: Computed Cataloging Summary
 collection-object-objectNumberRangeSearchLabel: Object Number (Range)
 collection-object-objectNumberRangeSearchStartLabel: From
 collection-object-objectNumberRangeSearchEndLabel: To
+collection-object-referenceNoteLabel: Credit Line
 
 # ------------------------------------------------------------
 # Added to support the collectionobjects_anthropology domain schema extensions

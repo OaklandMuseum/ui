@@ -272,7 +272,7 @@ var omca = {};
                 } else {
                     unitMap[dimension] = " " + unit;
                 }
-                //console.log("unit: " + unit + "; unit abbr: " + unitMap[dimension]);
+                console.log("unit: " + unit + "; unit abbr: " + unitMap[dimension]);
             }
         }
 
@@ -301,8 +301,8 @@ var omca = {};
             summaryParts.push("(" + measuredPartNote + ")");
         }*/
         
-        //return summaryParts.join(" ");
-        return summaryParts;
+        return summaryParts.join(" ");
+        //return summaryParts;
     }
 
 })(jQuery, fluid);
